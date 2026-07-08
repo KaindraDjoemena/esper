@@ -18,6 +18,8 @@ Provide a comprehensive review of code changes or system state, highlighting ris
 
 Follow the canonical Report Structure.
 
+Ensure exhaustive coverage of the reviewed scope. Do not artificially limit the findings section to a small list.
+
 When documenting findings, consider these audit-specific categories:
 - Correctness
 - Security
@@ -30,4 +32,4 @@ When documenting findings, consider these audit-specific categories:
 
 - principles/reporting/report-structure.md
 - principles/reporting/findings.md
-- principles/reporting/report-quality.md
+- principles/reporting/rubric.md

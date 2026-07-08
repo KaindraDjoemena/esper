@@ -89,7 +89,7 @@ Routing (Task Discovery)
 Prompt Specification
         │
         ▼
-Workflow
+Workflow (Delegation -> Scratchpads -> Synthesis)
         │
         ▼
 Engineering Principles
@@ -145,6 +145,18 @@ They supplement judgment and validate output quality before finalizing a task. T
 Defines **deliverable format**.
 Templates act as thin structural specifications for the final response. They define headers, layout, and presentation but rely on workflows for how to gather the data and `principles/reporting/` for how to format findings and scales.
 
+## `shared_context/` (Memory)
+
+Defines **persistent state**.
+A designated directory for agents to store repository maps (`esp-repo-map`), scratchpads, and RAG indexes (`esp-rag`) so that knowledge persists.
+- **Global Context** (`esper/shared_context/`): Used for meta-knowledge about the Esper framework itself.
+- **Project Context** (`<project-root>/.esper/shared_context/`): Used for codebase-specific memories. Agents must gracefully create this if it does not exist and advise the user to update `.gitignore`.
+
+## Skills (Extensions)
+
+Defines **capabilities**.
+Skills are optional, executable extensions that combine Esper's modules (prompts, workflows, checklists, templates) into highly specialized, automatable tasks (e.g., repository auditing, complex scaffolding). They exist outside the core repository to prevent bloat but are strictly governed by Esper's philosophy when invoked.
+
 ---
 
 # Reporting Model
@@ -198,7 +210,7 @@ Modules reference each other to form an interconnected graph, allowing discovera
 **Best Practices:**
 - **Keep it shallow:** Only link to immediate, high-value dependencies. Avoid deep recursive linking to prevent context window bloat.
 - **Directional referencing:** Prompts reference Workflows and Templates. Workflows reference Checklists and Principles. Templates reference Reporting Principles. Avoid circular dependencies.
-- **Canonical sources:** Do not redefine concepts inline. If a module needs to describe "Severity", it must link to `principles/reporting/severity.md`.
+- **Canonical sources:** Do not redefine concepts inline. If a module needs to describe "Severity", it must link to `principles/reporting/taxonomy.md`. Ensure you load foundational sources like `principles/retrieval.md` to guide context gathering.
 
 ---
 

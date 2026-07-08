@@ -23,9 +23,12 @@ Use the Performance Analysis template.
 
 ## Required Dependencies
 
+- workflows/agent-communication.md
+
 - workflows/performance-review.md
 - templates/performance-analysis.md
 
 ## Canonical Sources
 
 - principles/performance.md
+

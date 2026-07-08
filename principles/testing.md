@@ -29,3 +29,6 @@ Prioritize testing:
 
 Do not recommend tests that provide little practical value.
 
+## Canonical Sources
+
+- principles/engineering.md

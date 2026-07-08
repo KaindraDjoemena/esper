@@ -75,5 +75,5 @@ This demonstrates the evidence used to reach conclusions.
 
 ## Required Dependencies
 
-- templates/code-review.md
+- workflows/revision.md
 - checklists/code-review.md

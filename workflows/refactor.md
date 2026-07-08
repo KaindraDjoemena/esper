@@ -22,11 +22,13 @@ Improve code quality while preserving behavior.
 - Avoid mixing feature work with refactoring.
 - Reduce complexity without introducing unnecessary abstraction.
 - Keep changes easy to review.
+- **CRITICAL**: Draft a refactoring plan and ask the user for confirmation BEFORE executing any code changes.
 
 ## Required Dependencies
 
-- templates/implementation-plan.md
 - checklists/self-review.md
+- checklists/automation-safety.md
+- workflows/revision.md
 
 ## Canonical Sources
 

@@ -21,17 +21,8 @@ Ensure documentation reviews verify accuracy and produce high-quality reports.
 - [ ] Public APIs documented
 - [ ] Outdated documentation identified
 
-## Report Quality
-
-- [ ] Scope documented
-- [ ] Context documented
-- [ ] Findings prioritized
-- [ ] Evidence included
-- [ ] Recommendations actionable
-- [ ] Confidence communicated
-- [ ] Positive observations included
-
 ## Canonical Sources
 
-- principles/reporting/report-quality.md
+- principles/reporting/rubric.md
+- principles/reporting/report-structure.md
 

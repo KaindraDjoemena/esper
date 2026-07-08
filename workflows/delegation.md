@@ -45,6 +45,7 @@ Perform a final review to ensure the integrated result forms a cohesive, working
 ## Required Dependencies
 
 - checklists/delegation.md
+- workflows/revision.md
 
 ## Canonical Sources
 

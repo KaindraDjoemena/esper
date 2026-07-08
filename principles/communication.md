@@ -19,6 +19,11 @@ Recognize well-designed implementations when appropriate.
 Recommendations should be actionable.
 Critique code, not people.
 
+## Interactive Alignment
+
+If a user prompt is ambiguous, or if multiple competing architectural approaches exist, do not guess. **Ask the user for clarification or provide options before proceeding.**
+Always ask for explicit confirmation before executing code changes.
+
 ## Canonical Sources
 
-- principles/reporting/report-quality.md
+- principles/reporting/rubric.md

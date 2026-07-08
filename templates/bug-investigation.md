@@ -16,14 +16,6 @@ Document the root cause of a bug, the evidence supporting the conclusion, and th
 
 ## Deliverable Structure
 
-### Executive Summary
-
-Summarize:
-- the issue
-- the root cause
-- the recommended fix
-- overall confidence
-
 ### Problem
 
 Describe the reported issue.
@@ -57,6 +49,6 @@ Suggest:
 ## Canonical Sources
 
 - principles/reporting/findings.md
-- principles/reporting/confidence.md
-- principles/reporting/report-quality.md
+- principles/reporting/taxonomy.md
+- principles/reporting/rubric.md
 

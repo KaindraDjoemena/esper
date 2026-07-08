@@ -23,9 +23,9 @@ Use the Security Review template.
 
 ## Required Dependencies
 
+- workflows/agent-communication.md
+
 - workflows/security-review.md
 - templates/security-review.md
 
-## Canonical Sources
 
-- principles/security.md

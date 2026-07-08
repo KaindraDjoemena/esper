@@ -26,19 +26,8 @@ Ensure security reviews identify risks and produce high-quality, actionable repo
 - [ ] Least privilege followed
 - [ ] Practical attack vectors considered
 
-## Report Quality
-
-- [ ] Scope documented
-- [ ] Context documented
-- [ ] Findings prioritized
-- [ ] Evidence included
-- [ ] Recommendations actionable
-- [ ] Confidence communicated
-- [ ] Positive observations included
-- [ ] Implementation roadmap present
-- [ ] Overall assessment present
-
 ## Canonical Sources
 
 - principles/security.md
-- principles/reporting/report-quality.md
+- principles/reporting/rubric.md
+- principles/reporting/report-structure.md

@@ -70,7 +70,7 @@ Every finding should answer:
 - One finding per issue.
 - Prefer evidence over speculation.
 - Recommendations should follow naturally from evidence.
+- Exhaustiveness: Document all discovered issues. Do not artificially limit the number of findings (e.g., stopping at 3 or 5 items).
 ## Canonical Sources
 
-- principles/reporting/severity.md
-- principles/reporting/confidence.md
+- principles/reporting/taxonomy.md

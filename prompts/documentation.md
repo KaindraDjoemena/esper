@@ -21,5 +21,8 @@ Use examples derived from the implementation whenever practical.
 
 ## Required Dependencies
 
+- workflows/agent-communication.md
+
 - workflows/documentation.md
 - templates/documentation-review.md
+

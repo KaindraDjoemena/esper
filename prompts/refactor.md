@@ -23,8 +23,9 @@ Avoid mixing feature work with refactoring.
 
 ## Required Dependencies
 
-- workflows/refactoring.md
+- workflows/agent-communication.md
 
-## Canonical Sources
+- workflows/refactor.md
+- templates/implementation-plan.md
 
-- principles/refactoring.md
+

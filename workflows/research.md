@@ -31,9 +31,8 @@ Cite sources when practical.
 
 ## Required Dependencies
 
-- templates/research-report.md
 - checklists/self-review.md
 
 ## Canonical Sources
 
-- principles/reporting/confidence.md
+- principles/reporting/taxonomy.md

@@ -33,3 +33,21 @@ git clone https://github.com/KaindraDjoemena/esper.git ~/.gemini/esper
 cd ~/.gemini/esper
 ./install.sh
 ```
+
+## Persistent Memory (Context)
+
+Esper supports state persistence via the `shared_context/` module. 
+- **Global Context** (`~/.gemini/esper/shared_context/`) acts as the framework's meta-knowledge base.
+- **Project Context** (`<project-root>/.esper/shared_context/`) is generated dynamically by RAG and AST mapper skills. You should add `.esper/` to your project's `.gitignore` to prevent memory contamination in your public git history.
+
+## Available Skills
+
+Esper also supports modular skills that extend its capabilities (e.g., auditing, scaffolding, orchestration). These are maintained in a separate repository to prevent dependency hell.
+
+You can clone the skills repository into your `.gemini/antigravity-cli/skills/` directory:
+
+```bash
+git clone https://github.com/KaindraDjoemena/esper-skills.git ~/.gemini/antigravity-cli/skills
+```
+
+Once cloned, agents can invoke these skills on demand to perform complex workflows.

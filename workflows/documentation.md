@@ -49,5 +49,5 @@ Avoid repeating information already expressed clearly in code.
 
 ## Required Dependencies
 
-- templates/documentation-review.md
 - checklists/documentation.md
+- workflows/revision.md

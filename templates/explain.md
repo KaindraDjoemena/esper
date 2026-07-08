@@ -15,10 +15,6 @@ Provide a clear and structured explanation of an implementation that helps the r
 
 ## Deliverable Structure
 
-### Executive Summary
-
-A high-level summary of the system, component, or code snippet, including the overall confidence in the explanation.
-
 ### Core Components
 
 Identify the primary components and describe their responsibilities.
@@ -33,5 +29,5 @@ Highlight any crucial but non-obvious details, edge cases, or design decisions.
 
 ## Canonical Sources
 
-- principles/reporting/report-quality.md
+- principles/reporting/rubric.md
 

@@ -23,9 +23,9 @@ Prioritize helping the reader build a mental model.
 
 ## Required Dependencies
 
+- workflows/agent-communication.md
+
 - workflows/explain.md
 - templates/explain.md
 
-## Canonical Sources
 
-- principles/communication.md

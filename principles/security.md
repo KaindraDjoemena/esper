@@ -25,3 +25,6 @@ Apply the principle of least privilege.
 Prefer defense in depth over relying on a single protective measure.
 When reviewing security, prioritize practical risks over theoretical concerns.
 
+## Canonical Sources
+
+- principles/engineering.md

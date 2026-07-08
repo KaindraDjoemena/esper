@@ -72,9 +72,16 @@ Before presenting code, verify:
 - error handling
 - compatibility with surrounding code
 
-### 6. Present
+### 6. Ask for Confirmation
 
+Before executing any changes, present your proposed design and implementation plan to the user.
+**Stop and wait for explicit confirmation from the user before writing any code.**
+
+### 7. Execute and Summarize
+
+Once approved, execute the plan.
 Explain:
+- what was changed
 - why the implementation fits
 - tradeoffs
 - assumptions
@@ -83,6 +90,7 @@ If uncertain, state the uncertainty.
 
 ## Required Dependencies
 
+- workflows/revision.md
 - checklists/feature.md
 
 ## Canonical Sources
