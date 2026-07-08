@@ -23,3 +23,6 @@ Favor extending existing architecture over replacing it.
 Introduce new abstractions only when they clearly simplify the system or solve repeated problems.
 Avoid unnecessary layers whose primary purpose is theoretical flexibility.
 
+## Canonical Sources
+
+- principles/engineering.md

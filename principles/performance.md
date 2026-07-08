@@ -25,3 +25,6 @@ Consider:
 
 Explain performance tradeoffs rather than assuming faster is always better.
 
+## Canonical Sources
+
+- principles/engineering.md

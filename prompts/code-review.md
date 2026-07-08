@@ -31,6 +31,8 @@ Use the Code Review template.
 
 ## Required Dependencies
 
+- workflows/agent-communication.md
+
 - workflows/code-review.md
-- workflows/revision.md
 - templates/code-review.md
+

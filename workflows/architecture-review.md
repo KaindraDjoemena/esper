@@ -27,7 +27,6 @@ Evaluate how well the implementation fits the project's architecture.
 
 ## Required Dependencies
 
-- templates/architecture-review.md
 - checklists/architecture.md
 
 ## Canonical Sources

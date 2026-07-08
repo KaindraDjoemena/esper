@@ -40,3 +40,6 @@ Ensure feature implementations are well-designed, high-quality, and robust.
 - [ ] Failure scenarios considered
 - [ ] Backwards compatibility considered
 
+## Canonical Sources
+
+- principles/engineering.md

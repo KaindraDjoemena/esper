@@ -23,6 +23,8 @@ Use the Bug Investigation template.
 
 ## Required Dependencies
 
+- workflows/agent-communication.md
+
 - workflows/debugging.md
-- workflows/revision.md
 - templates/bug-investigation.md
+

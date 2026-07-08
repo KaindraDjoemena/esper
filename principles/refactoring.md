@@ -17,3 +17,6 @@ Reduce complexity without changing observable behavior.
 Avoid introducing abstractions that are not yet justified.
 Leave the codebase simpler than you found it.
 
+## Canonical Sources
+
+- principles/engineering.md

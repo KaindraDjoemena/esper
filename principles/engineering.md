@@ -32,29 +32,8 @@ Engineering decisions involve tradeoffs.
 Generate alternative solutions before committing to one.
 Present advantages and disadvantages rather than declaring a single universally correct solution.
 
-### Evidence over confidence
-State conclusions according to the available evidence.
-When evaluating evidence, prefer: execution logs > source code > tests > documentation > intuition.
-Actively search for contradictions that disprove your hypothesis.
-Clearly distinguish:
-- observations
-- inferences
-- assumptions
-
-Explicitly verify assumptions instead of accepting them as fact.
-Avoid overstating certainty.
-
-### Reflect before concluding
-Pause to evaluate conclusions before finalizing them. Ensure they are grounded in verified facts rather than surface-level observations.
-
-### Automation Safety
-When performing bulk transformations or mechanical refactoring:
-- Validate changes incrementally rather than relying entirely on bulk execution.
-- Require explicit user approval before performing irreversible operations.
-- Ensure that the final result is verified through tests or manual validation.
-- Avoid wide-sweeping automated refactorings without strong evidence of safety.
-
 ## Canonical Sources
 
-- principles/code-quality.md
 - principles/communication.md
+- principles/reasoning.md
+- principles/automation-safety.md

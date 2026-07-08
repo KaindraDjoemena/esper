@@ -22,3 +22,6 @@ Ensure releases are safe and do not introduce regressions.
 - [ ] Monitoring impact considered
 - [ ] Rollback strategy identified
 
+## Canonical Sources
+
+- principles/engineering.md

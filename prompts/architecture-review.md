@@ -23,6 +23,8 @@ Use the Architecture Review template.
 
 ## Required Dependencies
 
+- workflows/agent-communication.md
+
 - workflows/architecture-review.md
 - workflows/revision.md
 - templates/architecture-review.md
@@ -30,3 +32,4 @@ Use the Architecture Review template.
 ## Optional Dependencies
 
 - workflows/delegation.md (for broad systems requiring partitioned review)
+

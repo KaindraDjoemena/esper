@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "Mock Agent ran successfully."
+echo "Prompt received: $@"
+
+# Simulate fixing the calculator benchmark
+if [[ "$*" == *"logic error"* ]]; then
+    mkdir -p tests
+    echo "def test_dummy(): pass" > tests/test_calc.py
+    echo "Fixed calculator bugs."
+fi
+
+# Simulate fixing the architecture benchmark
+if [[ "$*" == *"architecture review"* ]]; then
+    echo "# Architecture Report" > architecture_report.md
+    echo "Generated architecture report."
+fi

@@ -23,18 +23,8 @@ Ensure pull request reviews are comprehensive and produce high-quality reports.
 - [ ] Missing tests identified
 - [ ] Documentation impact considered
 
-## Report Quality
-
-- [ ] Scope documented
-- [ ] Context documented
-- [ ] Findings prioritized
-- [ ] Evidence included
-- [ ] Recommendations actionable
-- [ ] Confidence communicated
-- [ ] Positive observations included
-- [ ] Overall assessment present
-
 ## Canonical Sources
 
-- principles/reporting/report-quality.md
+- principles/reporting/rubric.md
+- principles/reporting/report-structure.md
 

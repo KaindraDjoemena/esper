@@ -23,9 +23,13 @@ Every engineering report should include, where applicable:
 6. Implementation Roadmap
 7. Overall Assessment
 
+## Detailed Reports by Default
+
+Agents MUST return comprehensive, highly-specific reports (details, exact code paths, specific edge cases) by default. Executive summaries or high-level abstractions are strictly forbidden unless explicitly requested by the user. Hand-wavy conclusions are unacceptable.
+
 ## Executive Summary
 
-Summarize:
+If explicitly requested by the user, summarize:
 
 - overall assessment
 - overall confidence
@@ -33,7 +37,7 @@ Summarize:
 - major strengths
 - recommended next steps
 
-Avoid listing every finding.
+Otherwise, skip this section and provide full comprehensive details.
 
 ## Scope
 
@@ -71,6 +75,10 @@ Examples:
 - thoughtful testing
 
 ## Findings
+
+Document all issues discovered during the investigation. Do not artificially limit the number of findings to a generic list of 3 or 5 items.
+
+To ensure completeness, keep a running tally in the finding titles (e.g., "Finding 1", "Finding 2"). After the final finding, you MUST append a strict termination statement: *"End of exhaustive list. No further issues found in scope."*
 
 Each finding should follow the canonical Finding schema.
 

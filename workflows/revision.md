@@ -6,36 +6,47 @@ name: Revision
 
 ## Purpose
 
-Enforce a self-improvement loop. The agent must critique its own work before presenting the final deliverable to the user, mimicking how an experienced engineer reviews a design document before publishing.
+Enforce a rigorous, observable self-improvement loop. The agent must draft, critique, and verify its own work in an explicit scratchpad before presenting the final deliverable to the user, mimicking how an experienced engineer rigorously reviews a design document before publishing.
 
 ## When to Use
 
 - prior to finalizing any major report, plan, or review
 - when compiling final recommendations
+- when accuracy and exhaustiveness are critical
 
 ## Workflow
 
-### 1. Draft
-Formulate the initial findings, code, or recommendations internally. Do not present this draft to the user yet.
+### 1. The Scratchpad
+You must conduct your drafting and verification inside a `<scratchpad>` XML block. Do not attempt to do this "mentally" or implicitly.
 
-### 2. Critique
-Mentally evaluate your draft against the self-review checklist. Actively look for:
-- missing evidence
-- contradictions
-- overconfidence or speculation disguised as fact
-- actionable vs. unactionable recommendations
+### 2. Exploration / Thinking
+Before drafting, use the `<scratchpad>` to think out loud. Deconstruct the problem context unconditionally, consider edge cases, and organize your thoughts without worrying about formal formatting.
 
-Ask yourself: "Would a senior engineer approve this report?"
+### 3. Draft
+Still inside the `<scratchpad>`, formulate your initial findings, code, or recommendations based on your exploration. Ensure you are following all explicit exhaustiveness constraints (do not artificially limit your findings).
 
-### 3. Revise
-Adjust your draft based on the critique.
+### 4. Chain-of-Verification (CoVe)
+Perform a strict verification pass on your draft:
+- **Extract Claims:** List the factual claims and technical assertions made in your draft.
+- **Formulate Verification Questions:** For each extracted claim, explicitly write a question to test its validity (e.g., "Does `foo.py` actually contain function `bar()`?").
+- **Verify:** Answer your verification questions by checking against the source context and codebase.
+- **Mandate Citations:** If a claim cannot be backed up by explicit evidence or context, flag it for removal.
+
+### 5. Critique
+Evaluate your verified draft against the `self-review.md` checklist. Actively look for:
+- **Omissions:** What information, edge cases, or perspectives are missing from the baseline draft? (Counteract omission bias).
+- **Contradictions:** Are there any logical inconsistencies?
+- **Actionability:** Are the recommendations actionable and justified?
+
+### 6. Revise
+Adjust your draft based on the CoVe and Critique passes.
 - Downgrade confidence where evidence is weak.
-- Eliminate or clarify contradictions.
-- Strengthen the evidence hierarchy.
+- Eliminate unverifiable claims.
+- Expand the draft to include any flagged omissions.
 - Prioritize the most critical findings.
 
-### 4. Finalize
-Only after the critique and revision pass is complete, structure the final deliverable according to the designated template and present it to the user.
+### 7. Finalize
+Close the `</scratchpad>`. Only after the critique and revision passes are complete, structure the final deliverable according to the designated template and present it to the user.
 
 ## Required Dependencies
 

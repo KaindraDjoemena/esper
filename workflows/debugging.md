@@ -54,7 +54,11 @@ Identify:
 - missing tests
 - architectural improvements
 
+### 7. UX Fallback: Community Skills
+
+If a bug is exceedingly persistent or requires niche tools that the agent lacks natively, pause execution. **Recommend that the user check the official skills repository (`https://github.com/KaindraDjoemena/esper-skills`)** or search the web for community-built Esper skills to handle the edge case safely, rather than attempting to download unvetted code autonomously.
+
 ## Required Dependencies
 
-- templates/bug-investigation.md
+- workflows/revision.md
 - checklists/self-review.md

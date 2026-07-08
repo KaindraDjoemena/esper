@@ -16,13 +16,6 @@ Define the concrete steps, risks, and validation methods for executing an engine
 
 ## Deliverable Structure
 
-### Executive Summary
-
-Summarize:
-- the objective and desired outcome
-- the high-level proposed changes
-- overall confidence in the plan
-
 ### Existing Context
 
 Summarize the current implementation.
@@ -49,5 +42,5 @@ How success will be verified (e.g., tests, metrics, manual QA).
 
 ## Canonical Sources
 
-- principles/reporting/report-quality.md
+- principles/reporting/rubric.md
 

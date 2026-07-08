@@ -28,9 +28,9 @@ Systematically review system posture and identify security risks.
 
 ## Required Dependencies
 
-- templates/security-review.md
 - checklists/security.md
 - checklists/self-review.md
+- workflows/revision.md
 
 ## Canonical Sources
 

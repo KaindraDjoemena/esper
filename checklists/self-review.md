@@ -27,4 +27,4 @@ Before finalizing any report, plan, or review, verify the following:
 ## Canonical Sources
 
 - principles/reporting/rubric.md
-- principles/reporting/report-quality.md
+- principles/reporting/report-structure.md

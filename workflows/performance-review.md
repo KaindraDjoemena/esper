@@ -29,9 +29,9 @@ Analyze performance characteristics systematically.
 
 ## Required Dependencies
 
-- templates/performance-analysis.md
 - checklists/performance.md
 - checklists/self-review.md
+- workflows/revision.md
 
 ## Canonical Sources
 

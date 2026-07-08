@@ -25,10 +25,12 @@ Use the Implementation Plan template when the feature is non-trivial.
 
 ## Required Dependencies
 
+- workflows/agent-communication.md
+
 - workflows/code-writing.md
-- workflows/revision.md
 - templates/implementation-plan.md
 
 ## Optional Dependencies
 
 - workflows/delegation.md (for large features requiring parallel execution)
+

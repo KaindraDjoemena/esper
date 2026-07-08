@@ -23,18 +23,8 @@ Ensure architectural reviews consider necessary design elements and produce high
 - [ ] New abstractions justified
 - [ ] Long-term maintainability considered
 
-## Report Quality
-
-- [ ] Scope documented
-- [ ] Context documented
-- [ ] Findings prioritized
-- [ ] Evidence included
-- [ ] Recommendations actionable
-- [ ] Confidence communicated
-- [ ] Positive observations included
-- [ ] Overall assessment present
-
 ## Canonical Sources
 
 - principles/architecture.md
-- principles/reporting/report-quality.md
+- principles/reporting/rubric.md
+- principles/reporting/report-structure.md

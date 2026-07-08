@@ -26,18 +26,8 @@ Ensure code reviews are thorough and produce high-quality, actionable reports.
 - [ ] Appropriate abstraction level
 - [ ] Missing test coverage identified
 
-## Report Quality
-
-- [ ] Scope documented
-- [ ] Context documented
-- [ ] Findings prioritized
-- [ ] Evidence included
-- [ ] Recommendations actionable
-- [ ] Confidence communicated
-- [ ] Positive observations included
-- [ ] Overall assessment present
-
 ## Canonical Sources
 
-- principles/reporting/report-quality.md
+- principles/reporting/rubric.md
+- principles/reporting/report-structure.md
 

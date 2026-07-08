@@ -14,7 +14,7 @@ To use Esper with your AI assistants, clone this repository into your `.gemini` 
 New-Item -ItemType Directory -Force -Path ~/.gemini
 
 # 2. Clone the repository
-git clone https://github.com/YOUR_USERNAME/esper.git ~/.gemini/esper
+git clone https://github.com/KaindraDjoemena/esper.git ~/.gemini/esper
 
 # 3. Run the installation script to configure your AI bootstrap files
 cd ~/.gemini/esper
@@ -27,9 +27,27 @@ cd ~/.gemini/esper
 mkdir -p ~/.gemini
 
 # 2. Clone the repository
-git clone https://github.com/YOUR_USERNAME/esper.git ~/.gemini/esper
+git clone https://github.com/KaindraDjoemena/esper.git ~/.gemini/esper
 
 # 3. Run the installation script to configure your AI bootstrap files
 cd ~/.gemini/esper
 ./install.sh
 ```
+
+## Persistent Memory (Context)
+
+Esper supports state persistence via the `shared_context/` module. 
+- **Global Context** (`~/.gemini/esper/shared_context/`) acts as the framework's meta-knowledge base.
+- **Project Context** (`<project-root>/.esper/shared_context/`) is generated dynamically by RAG and AST mapper skills. You should add `.esper/` to your project's `.gitignore` to prevent memory contamination in your public git history.
+
+## Available Skills
+
+Esper also supports modular skills that extend its capabilities (e.g., auditing, scaffolding, orchestration). These are maintained in a separate repository to prevent dependency hell.
+
+You can clone the skills repository into your `.gemini/antigravity-cli/skills/` directory:
+
+```bash
+git clone https://github.com/KaindraDjoemena/esper-skills.git ~/.gemini/antigravity-cli/skills
+```
+
+Once cloned, agents can invoke these skills on demand to perform complex workflows.

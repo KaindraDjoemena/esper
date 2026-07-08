@@ -1,0 +1,23 @@
+# Esper Benchmark Test Case Schema
+
+test_cases:
+  - id: "bug_fix_python_calc"
+    description: "Fix a simulated bug in a Python calculator"
+    repository: "https://github.com/octocat/Hello-World" # Placeholder repo for scaffold
+    commit_hash: "HEAD" 
+    esper_prompt: "Find the logic error in the calculator and fix it."
+    injected_errors: [] # Optional: simulated tool failures to test error recovery
+    verification:
+      command: "pytest tests/" 
+      expected_exit_code: 0
+      timeout_seconds: 60
+
+  - id: "architecture_audit_flask"
+    description: "Perform an architecture review on a small Flask app"
+    repository: "https://github.com/octocat/Hello-World" # Placeholder repo
+    commit_hash: "HEAD"
+    esper_prompt: "Perform an architecture review and output to architecture_report.md"
+    verification:
+      command: "cat architecture_report.md || echo 'File not found'" 
+      expected_exit_code: 0
+      timeout_seconds: 120

@@ -26,8 +26,8 @@ Focus on helping the reader build a mental model rather than providing a line-by
 
 ## Required Dependencies
 
-- templates/explain.md
 - checklists/self-review.md
+- workflows/revision.md
 
 ## Canonical Sources
 

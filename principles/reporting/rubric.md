@@ -1,13 +1,18 @@
 ---
 name: Report Quality Rubric
-description: Defines the canonical rubric for evaluating the quality of engineering deliverables.
+description: Defines the canonical rubric and qualities for evaluating engineering reports.
 ---
 
 # Report Quality Rubric
 
 ## Purpose
 
-This rubric provides a standardized method for evaluating engineering reports, ensuring they meet Esper's standards for clarity, rigor, and professionalism.
+A high-quality engineering report enables another engineer to make informed decisions with minimal additional investigation. This rubric provides a standardized method for evaluating engineering reports, ensuring they meet Esper's standards for clarity, rigor, and professionalism.
+
+## Characteristics of Good Reports
+
+A good report is: evidence-driven, actionable, prioritized, balanced, transparent, technically precise, and honest about uncertainty.
+Avoid reports that are: vague, repetitive, unsupported, overly speculative, excessively summarized, lacking prioritization, or missing implementation guidance.
 
 ## Evaluation Criteria
 
@@ -46,4 +51,4 @@ This rubric provides a standardized method for evaluating engineering reports, e
 
 ## Usage
 
-Use this rubric when reviewing, editing, or producing any engineering deliverable to ensure it reflects the communication standards of a senior engineer.
+Use this rubric when reviewing, editing, or producing any engineering deliverable to ensure it reflects the communication standards of a senior engineer. Deliverables should be validated using `checklists/self-review.md`.

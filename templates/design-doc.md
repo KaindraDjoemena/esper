@@ -16,13 +16,6 @@ Evaluate or propose system architecture and design decisions before implementati
 
 ## Deliverable Structure
 
-### Executive Summary
-
-Summarize:
-- the problem
-- the proposed solution
-- overall confidence
-
 ### Problem Statement
 
 What problem are we solving?
@@ -65,6 +58,6 @@ Anything requiring clarification or user input.
 
 ## Canonical Sources
 
-- principles/reporting/report-quality.md
+- principles/reporting/rubric.md
 - principles/architecture.md
 

@@ -1,0 +1,23 @@
+# Base image for the benchmark Sandbox
+FROM python:3.10-slim
+
+# Install core system dependencies required by most codebases and agents
+RUN apt-get update && apt-get install -y \
+    git \
+    curl \
+    build-essential \
+    jq \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip install pytest
+
+# Set up the isolated workspace directory
+WORKDIR /workspace
+
+# Inject the Mock Agent CLI to simulate successful test completion
+COPY esper/benchmarks/mock-agent/esper /usr/local/bin/esper
+RUN chmod +x /usr/local/bin/esper
+
+# The entrypoint keeps the container alive in the background
+# so the orchestrator can inject commands (exec_run) dynamically.
+CMD ["sleep", "infinity"]

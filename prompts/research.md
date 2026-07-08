@@ -21,6 +21,8 @@ Use the Research Report template.
 
 ## Required Dependencies
 
+- workflows/agent-communication.md
+
 - workflows/research.md
 - workflows/revision.md
 - templates/research-report.md
@@ -28,3 +30,4 @@ Use the Research Report template.
 ## Optional Dependencies
 
 - workflows/delegation.md (for broad topics requiring parallel investigation)
+
