@@ -14,7 +14,7 @@ To use Esper with your AI assistants, clone this repository into your `.gemini` 
 New-Item -ItemType Directory -Force -Path ~/.gemini
 
 # 2. Clone the repository
-git clone https://github.com/YOUR_USERNAME/esper.git ~/.gemini/esper
+git clone https://github.com/KaindraDjoemena/esper.git ~/.gemini/esper
 
 # 3. Run the installation script to configure your AI bootstrap files
 cd ~/.gemini/esper
@@ -27,7 +27,7 @@ cd ~/.gemini/esper
 mkdir -p ~/.gemini
 
 # 2. Clone the repository
-git clone https://github.com/YOUR_USERNAME/esper.git ~/.gemini/esper
+git clone https://github.com/KaindraDjoemena/esper.git ~/.gemini/esper
 
 # 3. Run the installation script to configure your AI bootstrap files
 cd ~/.gemini/esper
