@@ -38,7 +38,7 @@ cd ~/.gemini/esper
 
 Esper supports state persistence via the `shared_context/` module. 
 - **Global Context** (`~/.gemini/esper/shared_context/`) acts as the framework's meta-knowledge base.
-- **Project Context** (`<project-root>/.esper/shared_context/`) is generated dynamically by RAG and AST mapper skills. You should add `.esper/` to your project's `.gitignore` to prevent memory contamination in your public git history.
+- **Project Context** (`<project-root>/.esper/shared_context/`) is generated dynamically by agent skills (e.g., checkpoints, notes, mapping). You should add `.esper/` to your project's `.gitignore` to prevent memory contamination in your public git history.
 
 ## Available Skills
 

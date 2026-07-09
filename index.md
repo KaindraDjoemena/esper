@@ -148,7 +148,7 @@ Templates act as thin structural specifications for the final response. They def
 ## `shared_context/` (Memory)
 
 Defines **persistent state**.
-A designated directory for agents to store repository maps (`esp-repo-map`), scratchpads, and RAG indexes (`esp-rag`) so that knowledge persists.
+A designated directory for agents to store repository maps, scratchpads, and persistent notes so that knowledge persists between sessions.
 - **Global Context** (`esper/shared_context/`): Used for meta-knowledge about the Esper framework itself.
 - **Project Context** (`<project-root>/.esper/shared_context/`): Used for codebase-specific memories. Agents must gracefully create this if it does not exist and advise the user to update `.gitignore`.
 
@@ -219,11 +219,14 @@ Modules reference each other to form an interconnected graph, allowing discovera
 ```text
 esper/
 ├── README.md
-├── prompts/
-├── workflows/
-├── principles/
-├── checklists/
-└── templates/
+├── benchmarks/      # Performance and validation tests
+├── bootstrap/       # Initial setup and installation templates
+├── checklists/      # Quality gates and validation rules
+├── principles/      # Engineering philosophy and canonical standards
+├── prompts/         # Entry points defining what the user is asking
+├── shared_context/  # Persistent state and scratchpads
+├── templates/       # Deliverable formats and structural layouts
+└── workflows/       # Procedural steps defining how a task is performed
 ```
 
 Future modules should follow the same design philosophy:

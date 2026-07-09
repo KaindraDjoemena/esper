@@ -21,4 +21,5 @@ Define the mission and delegate it into mutually exclusive, collectively exhaust
 - workflows/delegation.md
 - templates/synthesis.md
 - templates/shared-scratchpad.md
+- checklists/automation-safety.md
 

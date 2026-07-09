@@ -15,16 +15,16 @@ Systematically review system posture and identify security risks.
 
 ## Workflow
 
-1. Identify the boundaries and threat model of the system.
-2. Assume external input is untrusted and verify validation.
+1. Map the system's trust boundaries and document the security review scope.
+2. Apply input validation principles: confirm all external data is sanitized at system boundaries.
 3. Systematically evaluate:
    - authentication mechanisms
    - authorization boundaries
    - data handling and transit
-   - secrets management
-   - attack surface minimization
-4. Identify leaked credentials, secrets, or internal implementation details.
-5. Provide actionable mitigation strategies for identified risks.
+   - secrets and credential hygiene
+   - exposure surface reduction
+4. Verify that secrets, credentials, and internal implementation details are not inadvertently disclosed.
+5. Provide actionable remediation strategies for identified weaknesses.
 
 ## Required Dependencies
 
