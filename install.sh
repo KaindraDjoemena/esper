@@ -9,7 +9,8 @@ GEMINI_PATH="$(dirname "$ESPER_PATH")"
 echo "Installing Esper from $ESPER_PATH to $GEMINI_PATH"
 
 # Replace the placeholder and save to root .gemini
-sed "s|{{ESPER_PATH}}|$ESPER_PATH|g" "$ESPER_PATH/bootstrap/GEMINI.md.template" > "$GEMINI_PATH/GEMINI.md"
+ESCAPED_ESPER_PATH=$(printf '%s\n' "$ESPER_PATH" | sed 's/[\\|&]/\\&/g')
+sed "s|{{ESPER_PATH}}|$ESCAPED_ESPER_PATH|g" "$ESPER_PATH/bootstrap/GEMINI.md.template" > "$GEMINI_PATH/GEMINI.md"
 echo "Successfully generated GEMINI.md"
 
 # Copy CLAUDE.md

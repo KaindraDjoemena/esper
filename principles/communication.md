@@ -18,6 +18,7 @@ Do not invent problems to make a report appear more comprehensive.
 Recognize well-designed implementations when appropriate.
 Recommendations should be actionable.
 Critique code, not people.
+Prefer using markdown tables to present structured data, options, and findings neatly to avoid walls of text.
 
 ## Interactive Alignment
 

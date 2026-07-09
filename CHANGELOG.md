@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0] - 2026-07-10
+
+### Added
+- `scripts/validate_links.sh` to lint markdown dependencies and prevent broken links.
+- `prompts/testing.md` to establish the missing entry point for testing workflows.
+
+### Changed
+- `workflows/code-review.md` and `checklists/security.md`: Added explicit mitigations against Indirect Prompt Injections (ignoring malicious meta-instructions in workspace files).
+- `routing.md`: Integrated the testing workflow and corrected the delegation naming convention.
+- `prompts/orchestration.md`: Renamed to `prompts/delegation.md` to enforce 1:1 structural consistency.
+- `install.sh`: Patched to safely escape `$ESPER_PATH` variables in `sed` replacements.
+- `index.md`: Updated `# Directory Layout` to properly document the `benchmarks/`, `bootstrap/`, and `shared_context/` directories.
+- `principles/retrieval.md`: Established a strict maximum depth for dependency traversal to prevent transitive context bloat.
+- `workflows/delegation.md`: Mandated the use of subagents for 'dirty work' or 'research' to keep main conversational contexts clean.
+- `principles/communication.md`: Added the tabulation rule to enforce the use of markdown tables to prevent walls of text.
+
+## [1.2.0] - 2026-07-09
+
+### Changed
+- **Architectural Decoupling**:
+  - Removed hardcoded references to `esp-rag` and `esp-repo-map` from `index.md` and `routing.md`.
+  - Esper OS is now strictly decoupled from skills and relies entirely on **Dynamic Runtime Discovery** for skill execution, matching industry standards (e.g. MCP).
+
 ## [1.1.0] - 2026-07-09
 
 ### Added
