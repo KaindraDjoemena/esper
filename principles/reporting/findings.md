@@ -17,7 +17,7 @@ Short descriptive summary.
 
 ### Severity
 
-Use a level from the canonical [Severity Taxonomy](severity.md).
+Use a level from the canonical [Severity Taxonomy](taxonomy.md).
 
 ### Category
 

@@ -22,6 +22,7 @@ Esper scales through retrieval, not accumulation. Context should be earned, not 
 6. **Context Pruning**: Actively discard or deprioritize information that proves irrelevant during investigation to avoid polluting reasoning.
 7. **Canonical Sources**: Do not duplicate definitions. If a module requires understanding a concept (like "Severity"), it should reference the canonical source. Load the canonical source only if you actually need to apply that concept.
 8. **Minimize Overhead**: Favor modular composition over monolithic context. The smaller the active context, the sharper the reasoning.
+9. **Maximum Traversal Depth**: Establish a strict maximum depth for dependency traversal (e.g., do not follow links deeper than 2 or 3 levels from the entry point) to prevent transitive context bloat.
 
 ## Canonical Sources
 

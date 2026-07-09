@@ -18,7 +18,7 @@ Coordinate complex engineering tasks by planning, decomposing, delegating, and i
 ## Workflow
 
 ### 1. Plan and Decompose
-Identify if the task is too large for sequential execution. Decompose the task into independent, non-overlapping subtasks. Assign **Specialized Roles** by providing each subagent with a specific prompt as its entry point (e.g., assign `prompts/research.md` to create a Researcher, or `prompts/code-review.md` to create a Reviewer).
+Identify if the task is too large for sequential execution. Decompose the task into independent, non-overlapping subtasks. Assign **Specialized Roles** by providing each subagent with a specific prompt as its entry point (e.g., assign `prompts/research.md` to create a Researcher, or `prompts/code-review.md` to create a Reviewer). Always use subagents for 'dirty work' (like bulk file editing) or 'research' (like sweeping directories) to keep the main chat context clean.
 
 ### 2. Package Context
 For each subtask, prepare the specific context the subagent will need:
@@ -46,6 +46,7 @@ Perform a final review to ensure the integrated result forms a cohesive, working
 
 - checklists/delegation.md
 - workflows/revision.md
+- checklists/automation-safety.md
 
 ## Canonical Sources
 

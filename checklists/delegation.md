@@ -19,6 +19,7 @@ Before integrating a subagent's deliverable, verify the following:
 - [ ] **Integration:** Does the delegated work integrate cleanly with the primary objective and other subagents' work?
 - [ ] **Conflict Resolution:** Have all contradictions or disagreements between subagents been explicitly resolved into a single consensus?
 - [ ] **Confidence:** Is the confidence level of the delegated work preserved and communicated in the final integration?
+- [ ] **Context Cleanliness:** Were subagents used for 'dirty work' (like bulk file editing) or 'research' (like sweeping directories) to keep the main chat context clean?
 
 ## Canonical Sources
 

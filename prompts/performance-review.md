@@ -28,7 +28,3 @@ Use the Performance Analysis template.
 - workflows/performance-review.md
 - templates/performance-analysis.md
 
-## Canonical Sources
-
-- principles/performance.md
-

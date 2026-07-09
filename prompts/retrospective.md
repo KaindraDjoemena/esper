@@ -14,6 +14,6 @@ Review recent transcripts or scratchpads. Identify consistent failure modes, log
 
 - workflows/agent-communication.md
 - workflows/revision.md
-- checklists/self-review.md
+
 - templates/research-report.md
 
