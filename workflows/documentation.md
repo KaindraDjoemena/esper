@@ -2,52 +2,41 @@
 name: Documentation
 ---
 
-# Documentation Workflow
-
-## Purpose
-
+<esper_module type="workflow">
+<purpose>
 Produce documentation that accurately reflects the implementation.
-
-## When to Use
-
-- writing documentation
-- reviewing documentation
-
-## Workflow
-
-### 1. Read implementation
-
+</purpose>
+<when_to_use>
+<item>writing documentation</item>
+<item>reviewing documentation</item>
+</when_to_use>
+<instructions>
+<subsection>1. Read implementation</subsection>
 Read relevant source files before documenting behavior.
 Documentation should describe reality.
-
-### 2. Separate facts
-
+<subsection>2. Separate facts</subsection>
 Differentiate:
-- observed behavior
-- inferred behavior
-- assumptions
-
+<item>observed behavior</item>
+<item>inferred behavior</item>
+<item>assumptions</item>
 Never present assumptions as facts.
-
-### 3. Explain intent
-
+<subsection>3. Explain intent</subsection>
 Focus on:
-- why
-- when
-- constraints
-
+<item>why</item>
+<item>when</item>
+<item>constraints</item>
 Avoid narrating obvious code.
-
-### 4. Use examples
-
+<subsection>4. Use examples</subsection>
 Whenever practical, derive examples from the implementation.
-
-### 5. Keep documentation maintainable
-
+<subsection>5. Keep documentation maintainable</subsection>
 Prefer concise explanations.
 Avoid repeating information already expressed clearly in code.
-
-## Required Dependencies
-
-- checklists/documentation.md
-- workflows/revision.md
+</instructions>
+<dependencies>
+<required>
+<item>checklists/cleanup.md</item>
+<item>checklists/documentation.md</item>
+<item>workflows/revision.md</item>
+</required>
+</dependencies>
+</esper_module>

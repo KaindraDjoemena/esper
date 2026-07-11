@@ -25,6 +25,7 @@ You must have Docker Desktop installed and running on your host machine.
 
 ### 2. Setup
 Install the required Python dependencies for the orchestrator:
+
 ```bash
 cd benchmarks/
 pip install -r requirements.txt
@@ -32,10 +33,13 @@ pip install -r requirements.txt
 
 ### 3. Execution
 Simply run the orchestrator script:
+
 ```bash
 python orchestrator.py
 ```
+
 The script will automatically:
+
 1. Build the `esper-sandbox:latest` Docker image.
 2. Iterate through every test defined in `schema.yaml`.
 3. Spin up an isolated container, run the verification commands, and report `✅ PASSED` or `❌ FAILED`.
@@ -48,6 +52,7 @@ The script will automatically:
 To add a new test case, simply append it to the `test_cases` array in `schema.yaml`. 
 
 **Example Schema:**
+
 ```yaml
   - id: "my_custom_benchmark"
     description: "Fix a specific bug in a target repo"

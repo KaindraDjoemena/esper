@@ -2,26 +2,25 @@
 name: Release Checklist
 ---
 
-# Release Checklist
-
-## Purpose
-
+<esper_module type="checklist">
+<purpose>
 Ensure releases are safe and do not introduce regressions.
-
-## When to Use
-
-- preparing a release
-- reviewing deployment plans
-
-## Release Verification
-
-- [ ] Breaking changes documented
-- [ ] Configuration changes identified
-- [ ] Database migrations reviewed
-- [ ] Feature flags considered
-- [ ] Monitoring impact considered
-- [ ] Rollback strategy identified
-
-## Canonical Sources
-
-- principles/engineering.md
+</purpose>
+<when_to_use>
+<item>preparing a release</item>
+<item>reviewing deployment plans</item>
+</when_to_use>
+<release_verification>
+<item uncompleted="true">Breaking changes documented</item>
+<item uncompleted="true">Configuration changes identified</item>
+<item uncompleted="true">Database migrations reviewed</item>
+<item uncompleted="true">Feature flags considered</item>
+<item uncompleted="true">Monitoring impact considered</item>
+<item uncompleted="true">Rollback strategy identified</item>
+</release_verification>
+<dependencies>
+<canonical_sources>
+<item>principles/engineering.md</item>
+</canonical_sources>
+</dependencies>
+</esper_module>

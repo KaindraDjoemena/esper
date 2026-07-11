@@ -2,17 +2,16 @@
 name: Security Review
 ---
 
-# Security Review
-
-## Purpose
-
+<esper_module type="template">
+<purpose>
 Identify security vulnerabilities, evaluate attack surfaces, and recommend mitigations.
-
-## When to Use
-
-- security audits
-- pre-release reviews
-- threat modeling
+</purpose>
+<when_to_use>
+<item>security audits</item>
+<item>pre-release reviews</item>
+<item>threat modeling</item>
+</when_to_use>
+<output_format>
 
 ## Deliverable Structure
 
@@ -28,8 +27,12 @@ Identify exposed interfaces, trust boundaries, and data flows.
 
 Recognize good security decisions (e.g., defense in depth, input validation).
 
-## Canonical Sources
-
-- principles/reporting/report-structure.md
-- principles/reporting/findings.md
-- principles/security.md
+</output_format>
+<dependencies>
+<canonical_sources>
+<item>principles/reporting/report-structure.md</item>
+<item>principles/reporting/findings.md</item>
+<item>principles/security.md</item>
+</canonical_sources>
+</dependencies>
+</esper_module>

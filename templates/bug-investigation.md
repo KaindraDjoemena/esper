@@ -2,17 +2,16 @@
 name: Bug Investigation
 ---
 
-# Bug Investigation
-
-## Purpose
-
+<esper_module type="template">
+<purpose>
 Document the root cause of a bug, the evidence supporting the conclusion, and the recommended fix.
-
-## When to Use
-
-- debugging
-- incident response
-- bug fixing
+</purpose>
+<when_to_use>
+<item>debugging</item>
+<item>incident response</item>
+<item>bug fixing</item>
+</when_to_use>
+<output_format>
 
 ## Deliverable Structure
 
@@ -42,13 +41,17 @@ Explain the preferred solution.
 ### Regression Prevention
 
 Suggest:
+
 - tests
 - validation
 - architectural improvements
 
-## Canonical Sources
-
-- principles/reporting/findings.md
-- principles/reporting/taxonomy.md
-- principles/reporting/rubric.md
-
+</output_format>
+<dependencies>
+<canonical_sources>
+<item>principles/reporting/findings.md</item>
+<item>principles/reporting/taxonomy.md</item>
+<item>principles/reporting/rubric.md</item>
+</canonical_sources>
+</dependencies>
+</esper_module>

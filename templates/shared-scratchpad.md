@@ -2,17 +2,19 @@
 name: Shared Scratchpad
 ---
 
-# Shared Subagent Scratchpad
-
-## Purpose
+<esper_module type="template">
+<purpose>
 A persistent shared context file where subagents can write their partial evidence, hypotheses, and state so that peer agents and orchestrators can review their progress in real time.
-
-## Format
-- Use timestamps for entries.
-- Use explicit identifiers for the subagent writing the entry.
-- Maintain a running list of "Open Questions".
-
-## Canonical Sources
-
-- principles/reporting/report-structure.md
-- principles/reporting/findings.md
+</purpose>
+<format>
+<item>Use timestamps for entries.</item>
+<item>Use explicit identifiers for the subagent writing the entry.</item>
+<item>Maintain a running list of "Open Questions".</item>
+</format>
+<dependencies>
+<canonical_sources>
+<item>principles/reporting/report-structure.md</item>
+<item>principles/reporting/findings.md</item>
+</canonical_sources>
+</dependencies>
+</esper_module>

@@ -2,63 +2,49 @@
 name: Debugging
 ---
 
-# Debugging Workflow
-
-## Purpose
-
+<esper_module type="workflow">
+<purpose>
 Identify the root cause rather than the first plausible explanation.
-
-## When to Use
-
-- investigating bugs
-- resolving incidents
-
-## Workflow
-
-### 1. Collect evidence
-
+</purpose>
+<when_to_use>
+<item>investigating bugs</item>
+<item>resolving incidents</item>
+</when_to_use>
+<instructions>
+<subsection>1. Collect evidence</subsection>
 Read:
-- error messages
-- logs
-- stack traces
-- relevant implementation
-- configuration
-
+<item>error messages</item>
+<item>logs</item>
+<item>stack traces</item>
+<item>relevant implementation</item>
+<item>configuration</item>
 Do not guess.
-
-### 2. Form hypotheses
-
+<subsection>2. Form hypotheses</subsection>
 Generate multiple possible causes.
 Avoid locking onto the first explanation.
-
-### 3. Eliminate hypotheses
-
+<subsection>3. Eliminate hypotheses</subsection>
 Use evidence to rule possibilities out.
 Prefer verification over intuition.
-
-### 4. Identify root cause
-
+<subsection>4. Identify root cause</subsection>
 Explain:
-- what failed
-- why it failed
-- why the issue appeared now
-
-### 5. Recommend the smallest reasonable fix
-
+<item>what failed</item>
+<item>why it failed</item>
+<item>why the issue appeared now</item>
+<subsection>5. Recommend the smallest reasonable fix</subsection>
 Prefer fixing the underlying cause rather than masking symptoms.
-
-### 6. Prevent regression
-
+<subsection>6. Prevent regression</subsection>
 Identify:
-- missing validation
-- missing tests
-- architectural improvements
-
-### 7. UX Fallback: Community Skills
-
-If a bug is exceedingly persistent or requires niche tools that the agent lacks natively, pause execution. **Recommend that the user check the official skills repository (`https://github.com/KaindraDjoemena/esper-skills`)** or search the web for community-built Esper skills to handle the edge case safely, rather than attempting to download unvetted code autonomously.
-
-## Required Dependencies
-
-- workflows/revision.md
-- checklists/self-review.md
+<item>missing validation</item>
+<item>missing tests</item>
+<item>architectural improvements</item>
+<subsection>7. UX Fallback: Community Skills</subsection>
+If a bug is exceedingly persistent or requires niche tools that the agent lacks natively, pause execution. Recommend that the user check the official skills repository (`https://github.com/KaindraDjoemena/esper-skills`) or search the web for community-built Esper skills to handle the edge case safely, rather than attempting to download unvetted code autonomously.
+</instructions>
+<dependencies>
+<required>
+<item>checklists/cleanup.md</item>
+<item>workflows/revision.md</item>
+<item>checklists/self-review.md</item>
+</required>
+</dependencies>
+</esper_module>

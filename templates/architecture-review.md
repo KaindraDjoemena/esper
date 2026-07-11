@@ -2,18 +2,17 @@
 name: Architecture Review
 ---
 
-# Architecture Review
-
-## Purpose
-
+<esper_module type="template">
+<purpose>
 Evaluate how well an implementation aligns with the existing architecture and identify opportunities for improvement.
-
-## When to Use
-
-- architecture review
-- design review
-- refactoring discussion
-- large feature implementation
+</purpose>
+<when_to_use>
+<item>architecture review</item>
+<item>design review</item>
+<item>refactoring discussion</item>
+<item>large feature implementation</item>
+</when_to_use>
+<output_format>
 
 ## Deliverable Structure
 
@@ -24,6 +23,7 @@ Include the following architecture-specific sections:
 ### Architectural Strengths
 
 Identify design decisions that positively contribute to:
+
 - maintainability
 - extensibility
 - readability
@@ -35,6 +35,7 @@ Explain *why* they are effective.
 ### Dependency Analysis
 
 Evaluate:
+
 - dependency direction
 - unnecessary dependencies
 - circular dependencies
@@ -44,11 +45,13 @@ Evaluate:
 ### Consistency
 
 Evaluate whether the implementation follows existing project conventions.
+
 If it intentionally deviates, explain whether the deviation appears justified.
 
 ### Long-Term Considerations
 
 Discuss:
+
 - maintainability
 - extensibility
 - operational complexity
@@ -56,8 +59,11 @@ Discuss:
 
 Avoid speculative concerns that are unsupported by the implementation.
 
-## Canonical Sources
-
-- principles/reporting/report-structure.md
-- principles/reporting/findings.md
-
+</output_format>
+<dependencies>
+<canonical_sources>
+<item>principles/reporting/report-structure.md</item>
+<item>principles/reporting/findings.md</item>
+</dependencies>
+</canonical_sources>
+</esper_module>

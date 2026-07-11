@@ -2,34 +2,33 @@
 name: Refactoring
 ---
 
-# Refactoring Workflow
-
-## Purpose
-
+<esper_module type="workflow">
+<purpose>
 Improve code quality while preserving behavior.
-
-## When to Use
-
-- cleaning up code
-- paying down technical debt
-- preparing for a new feature
-
-## Workflow
-
-- Understand the existing implementation.
-- Preserve observable behavior.
-- Prefer incremental improvements.
-- Avoid mixing feature work with refactoring.
-- Reduce complexity without introducing unnecessary abstraction.
-- Keep changes easy to review.
-- **CRITICAL**: Draft a refactoring plan and ask the user for confirmation BEFORE executing any code changes.
-
-## Required Dependencies
-
-- checklists/self-review.md
-- checklists/automation-safety.md
-- workflows/revision.md
-
-## Canonical Sources
-
-- principles/refactoring.md
+</purpose>
+<when_to_use>
+<item>cleaning up code</item>
+<item>paying down technical debt</item>
+<item>preparing for a new feature</item>
+</when_to_use>
+<instructions>
+<item>Understand the existing implementation.</item>
+<item>Preserve observable behavior.</item>
+<item>Prefer incremental improvements.</item>
+<item>Avoid mixing feature work with refactoring.</item>
+<item>Reduce complexity without introducing unnecessary abstraction.</item>
+<item>Keep changes easy to review.</item>
+<item>CRITICAL: Draft a refactoring plan and ask the user for confirmation BEFORE executing any code changes.</item>
+</instructions>
+<dependencies>
+<required>
+<item>checklists/cleanup.md</item>
+<item>checklists/self-review.md</item>
+<item>checklists/automation-safety.md</item>
+<item>workflows/revision.md</item>
+</required>
+<canonical_sources>
+<item>principles/refactoring.md</item>
+</canonical_sources>
+</dependencies>
+</esper_module>
