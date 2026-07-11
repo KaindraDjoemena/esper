@@ -75,6 +75,15 @@ When guidance changes, it should only need to be updated once.
 
 ---
 
+## Delegation and Orchestration
+
+Parent agents should remain high-level and orchestrate the overall engineering process. 
+
+- Delegate 'dirty work' (such as deep research, bulk file modifications, and heavy implementation) to specialized subagents.
+- For tasks that are independent and parallelizable, **ALWAYS prompt the user** for whether they want to use a concurrent subagent workflow before execution.
+
+---
+
 # Architecture
 
 Esper is organized as a layered system.
@@ -119,42 +128,55 @@ The central index that maps a user's request to the correct entry point. It prev
 ## `prompts/` (Intent)
 
 Defines **what** the user is asking. Prompts act as entry points that translate user intent into Esper's architecture. 
+
 They identify the task and declare **Required Dependencies** (workflows, templates). 
+
 Prompts must not contain step-by-step instructions or formatting guidance.
 
 ## `workflows/` (Process)
 
 Defines **how** an engineering task should be performed.
+
 Workflows describe repeatable procedural steps (e.g., gathering context, understanding architecture, validating assumptions).
+
 Workflows are strictly procedural and should not define output formatting or underlying engineering philosophy.
 
 ## `principles/` (Philosophy)
 
 Defines **why** we make certain engineering choices, and establishes canonical standards.
+
 Principles guide engineering judgment throughout a task (e.g., simplicity, consistency, maintainability).
+
 They explain philosophy, not process.
 
 ## `checklists/` (Validation)
 
 Defines **reminders** and quality gates.
+
 Checklists exist to reduce oversight by reminding the assistant of commonly forgotten considerations (e.g., "Are failure paths handled?").
+
 They supplement judgment and validate output quality before finalizing a task. They should not introduce new procedures.
 
 ## `templates/` (Structure)
 
 Defines **deliverable format**.
+
 Templates act as thin structural specifications for the final response. They define headers, layout, and presentation but rely on workflows for how to gather the data and `principles/reporting/` for how to format findings and scales.
 
 ## `shared_context/` (Memory)
 
-Defines **persistent state**.
-A designated directory for agents to store repository maps, scratchpads, and persistent notes so that knowledge persists between sessions.
+Defines **persistent state** via a **Hierarchical Context Structure**.
+
+To prevent context window bloat and eliminate the need for lossy text compression, Esper enforces decentralized, domain-specific memory files (e.g., `ui-state.md`, `auth-state.md`, `security-notes.md`) rather than monolithic `notes.md` files.
+
 - **Global Context** (`esper/shared_context/`): Used for meta-knowledge about the Esper framework itself.
 - **Project Context** (`<project-root>/.esper/shared_context/`): Used for codebase-specific memories. Agents must gracefully create this if it does not exist and advise the user to update `.gitignore`.
+- **Context Routing**: Subagents must only retrieve and load the specific state files that directly pertain to their isolated task (via dependencies), guaranteeing high token efficiency and zero historical data loss.
 
 ## Skills (Extensions)
 
 Defines **capabilities**.
+
 Skills are optional, executable extensions that combine Esper's modules (prompts, workflows, checklists, templates) into highly specialized, automatable tasks (e.g., repository auditing, complex scaffolding). They exist outside the core repository to prevent bloat but are strictly governed by Esper's philosophy when invoked.
 
 ---
@@ -180,6 +202,7 @@ Esper composes small modules dynamically. When overlapping or conflicting guidan
 5. **Template**: Structural layout.
 
 **Conflict Resolution:**
+
 - If a Template defines a finding format that conflicts with `principles/reporting/`, the **Principle** wins.
 - If a Workflow step contradicts an Engineering Principle (e.g., the workflow says "rewrite all", but the principle says "minimize change"), the **Workflow** takes precedence for that specific task.
 - If an implicit assumption conflicts with an explicit checklist item, the **Checklist** requirement must be satisfied.
@@ -203,11 +226,13 @@ An engineering task in Esper is considered complete only when the following crit
 Modules reference each other to form an interconnected graph, allowing discoverability without monolithic prompts. Context must be earned and retrieved incrementally.
 
 **Dependency Types:**
+
 - **Required Dependencies:** Modules strictly necessary to complete the task (e.g., core workflows, templates). Must be loaded. **If a Required Dependency is missing or fails to load, the agent must halt execution and notify the user to resolve the broken link before proceeding.**
 - **Optional Dependencies:** Modules loaded only if justified by the evolving task context (e.g., retrieving security principles during a review).
 - **Canonical Sources:** Definitional modules (e.g., severity scales). Load only if you explicitly need to apply the concept.
 
 **Best Practices:**
+
 - **Keep it shallow:** Only link to immediate, high-value dependencies. Avoid deep recursive linking to prevent context window bloat.
 - **Directional referencing:** Prompts reference Workflows and Templates. Workflows reference Checklists and Principles. Templates reference Reporting Principles. Avoid circular dependencies.
 - **Canonical sources:** Do not redefine concepts inline. If a module needs to describe "Severity", it must link to `principles/reporting/taxonomy.md`. Ensure you load foundational sources like `principles/retrieval.md` to guide context gathering.

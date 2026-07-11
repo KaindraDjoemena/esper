@@ -2,33 +2,32 @@
 name: Architecture Review
 ---
 
-# Architecture Review Workflow
-
-## Purpose
-
+<esper_module type="workflow">
+<purpose>
 Evaluate how well the implementation fits the project's architecture.
-
-## When to Use
-
-- conducting architecture reviews
-- evaluating system design
-
-## Workflow
-
-- Understand the existing architecture before recommending changes.
-- Identify architectural boundaries.
-- Evaluate cohesion and coupling.
-- Look for unnecessary abstractions.
-- Consider scalability, extensibility, and maintainability.
-- Generate alternative architectural approaches and analyze their trade-offs.
-- Actively search for contradictions or evidence that challenges your initial assessment.
-- Explain tradeoffs rather than declaring one solution universally correct.
-- Recommend architectural changes only when they provide clear long-term value.
-
-## Required Dependencies
-
-- checklists/architecture.md
-
-## Canonical Sources
-
-- principles/architecture.md
+</purpose>
+<when_to_use>
+<item>conducting architecture reviews</item>
+<item>evaluating system design</item>
+</when_to_use>
+<instructions>
+<item>Understand the existing architecture before recommending changes.</item>
+<item>Identify architectural boundaries.</item>
+<item>Evaluate cohesion and coupling.</item>
+<item>Look for unnecessary abstractions.</item>
+<item>Consider scalability, extensibility, and maintainability.</item>
+<item>Generate alternative architectural approaches and analyze their trade-offs.</item>
+<item>Actively search for contradictions or evidence that challenges your initial assessment.</item>
+<item>Explain tradeoffs rather than declaring one solution universally correct.</item>
+<item>Recommend architectural changes only when they provide clear long-term value.</item>
+</instructions>
+<dependencies>
+<required>
+<item>checklists/cleanup.md</item>
+<item>checklists/architecture.md</item>
+</required>
+<canonical_sources>
+<item>principles/architecture.md</item>
+</canonical_sources>
+</dependencies>
+</esper_module>

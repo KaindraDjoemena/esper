@@ -2,6 +2,56 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.0] - 2026-07-11
+
+### Added
+- **XML Context Optimization**: Completely refactored the Esper architecture to use a unified `<esper_module>` canonical XML schema for all rules, templates, workflows, principles, and checklists. This guarantees absolute context boundaries for LLM parsers.
+- **Always-On Rules**: Extracted core engineering philosophies from `index.md` and injected them as Always-On rules (`esper-philosophy.md`) into `.agents/rules/`.
+- **Glob-Activated Rules**: Implemented `esper-testing.md` to trigger specific workflows when working with test files.
+- **Esper RPC Protocol**: Established an Always-On rule (`esper-rpc.md`) that defines a strict XML-based Parent-Child agent communication protocol (Envelope, Performatives, and Payload schemas) to eliminate semantic drift.
+- **Interactive Confirmations**: Updated global configurations (`GEMINI.md`, `CLAUDE.md`, and `bootstrap/CLAUDE.md`) to explicitly mandate the use of the native `ask_question` interactive modal rather than unstructured A/B/C text matching.
+- **Hierarchical Context Architecture**: Deprecated monolithic memory files (`notes.md`) in favor of isolated, domain-specific state files (e.g., `ui-state.md`).
+- **Native RAG Retrieval**: Updated `esp-rag` to enforce YAML frontmatter on all memory files, mandating that agents use native semantic search/grep to selectively load context rather than loading the entire `shared_context` directory.
+- **Presentation Standards**: Injected a `<presentation_style>` node into `report-structure.md` strongly mandating the use of Markdown tables for structured and comparative data to improve readability.
+
+### Changed
+- **Deprecated Routing Table**: Deprecated the monolithic `routing.md` file in favor of Antigravity's native Progressive Disclosure Rule resolution.
+- **RPC Payload Optimization**: Replaced the verbose XML `<payload>` blocks in `esper-rpc.md` with dense JSON schemas. This prevents token exhaustion and context bottlenecks during multi-agent Swarm Sharding.
+- **Dependency Graph Repairs**: Fixed strict path resolution violations in `prompts/architecture-review.md`, `prompts/feature.md`, and `prompts/research.md` by moving descriptive trailing text into XML comments.
+
+## [1.5.0] - 2026-07-10
+
+### Added
+- **Framework Update Protocol**: Added `update.ps1` and `update.sh` scripts. Running these scripts automatically pulls the latest upstream changes and re-runs the installation scripts to ensure users' active bootstrap files (`~/.gemini/GEMINI.md`) stay perfectly synced with updates.
+- **Future Architecture Tracking**: Created `shared_context/ideas/future_architecture.md` to persistently document 10 massive paradigm shifts for Esper's future roadmap (including MCP integration, Swarm Sharding, and Package Managers).
+- **Static Context Benchmarker**: Added `benchmarks/token_benchmark.py` and `benchmarks/baselines/normal_feature.md` to statically measure and prove the context-efficiency of Esper's dynamic routing compared to monolithic prompts.
+- **JSON Dependency Scanner**: Added `scripts/scan_dependencies.py`, a utility that parses the entire Markdown repository for both explicit headers and inline links, returning a structured JSON report of broken links and orphaned files (ignoring entry points).
+
+### Changed
+- **Subagent Orchestration Enforcement**: Globally updated `index.md`, `routing.md`, `prompts/delegation.md`, and `workflows/delegation.md` to strictly mandate that parent agents remain high-level orchestrators. Agents must now proactively prompt the user to spin up concurrent subagent workflows for parallelizable 'dirty work'.
+- **Global Communication Standards**: Added `principles/communication.md` as a Required Dependency to the core `workflows/agent-communication.md`. This ensures all agents natively load formatting rules (e.g., using Markdown tables for structured data) before responding to the user.
+- **Autonomous Skills Failsafe**: Updated the Bootstrap templates (`GEMINI.md.template` and `CLAUDE.md`) to include a `CRITICAL` directive that explicitly warns agents that nested skills will *not* appear in their native `<skills>` prompt block. Agents are now forced to proactively use `list_dir` on `~/.gemini/config/skills/esper-skills/` to verify the directory exists upon initialization before triggering the failsafe warning.
+- **Agent-Driven Skill Refactor**: We shifted Esper skills away from being treated as native Antigravity UI slash commands (`/`) and redefined them as agent-driven markdown modules. This paradigm shift means skills no longer need to adhere to the strict 1-level-deep Antigravity parser, permitting the much cleaner subfolder clone. Furthermore, removed legacy instructions in `routing.md` that told agents to rely on dynamically injected UI skill lists.
+- **README Adjustments**: Updated the installation instructions in `README.md` to remove hardcoded paths and clarify that AI agents can autonomously install the skills repository. Added a new section detailing **Global vs Local Installations**.
+- **Markdown UX Rendering Fixes**: Executed a comprehensive repository-wide audit and fix for Markdown rendering compatibility. Added missing blank lines before lists, code blocks, and between consecutive sentences across 34 core files to ensure the framework documentation renders correctly in strict HTML parsers like the Antigravity IDE.
+- **Cross-Environment Compatibility**: Updated global skills paths to universally point to the official `~/.gemini/config/skills/` standard, ensuring seamless skill sharing across both the Antigravity CLI and Antigravity IDE environments.
+- **Initialization Context Warnings**: Implemented a new `CRITICAL` bootstrap directive forcing agents to greet the user upon initialization and explicitly state their operating context (Local vs Global, exact file path, and CLI vs IDE).
+
+## [1.4.0] - 2026-07-10
+
+### Added
+- **Workspace Cleanup Protocol**: 
+  - Added `checklists/cleanup.md` to establish a strict rule for isolating diagnostic scripts and temporary test files in `.esper/shared_context/scratch/`.
+  - Added a UX prompt requirement allowing users to preserve valuable utility scripts in `.esper/utils/` before they are automatically deleted.
+- **Benchmarking Suite**:
+  - Expanded `benchmarks/orchestrator.py` to support dual-pass execution comparing "Vanilla Gemini" (`baseline_agent.py`) against Esper.
+  - Implemented automatic latency and token-usage telemetry tracking within the sandbox orchestrator.
+  - Added a deterministic side-by-side markdown report generator (`benchmark_report.md`) for human-in-the-loop qualitative grading.
+
+### Changed
+- **Workflow Updates**:
+  - Globally injected `checklists/cleanup.md` as a Required Dependency across all 13 active workflows to strictly enforce workspace hygiene.
+
 ## [1.3.0] - 2026-07-10
 
 ### Added

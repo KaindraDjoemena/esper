@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     jq \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install pytest
+RUN pip install pytest google-genai
 
 # Set up the isolated workspace directory
 WORKDIR /workspace
@@ -17,6 +17,10 @@ WORKDIR /workspace
 # Inject the Mock Agent CLI to simulate successful test completion
 COPY esper/benchmarks/mock-agent/esper /usr/local/bin/esper
 RUN chmod +x /usr/local/bin/esper
+
+# Inject the Baseline Gemini Agent
+COPY esper/benchmarks/mock-agent/baseline_agent.py /usr/local/bin/baseline_agent.py
+RUN chmod +x /usr/local/bin/baseline_agent.py
 
 # The entrypoint keeps the container alive in the background
 # so the orchestrator can inject commands (exec_run) dynamically.

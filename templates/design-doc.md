@@ -2,17 +2,16 @@
 name: Design Document
 ---
 
-# Design Document
-
-## Purpose
-
+<esper_module type="template">
+<purpose>
 Evaluate or propose system architecture and design decisions before implementation.
-
-## When to Use
-
-- new feature
-- architecture discussion
-- refactoring proposal
+</purpose>
+<when_to_use>
+<item>new feature</item>
+<item>architecture discussion</item>
+<item>refactoring proposal</item>
+</when_to_use>
+<output_format>
 
 ## Deliverable Structure
 
@@ -56,8 +55,11 @@ If applicable, describe how to transition to the new design.
 
 Anything requiring clarification or user input.
 
-## Canonical Sources
-
-- principles/reporting/rubric.md
-- principles/architecture.md
-
+</output_format>
+<dependencies>
+<canonical_sources>
+<item>principles/reporting/rubric.md</item>
+<item>principles/architecture.md</item>
+</canonical_sources>
+</dependencies>
+</esper_module>

@@ -2,37 +2,38 @@
 name: Performance Review
 ---
 
-# Performance Review Workflow
-
-## Purpose
-
+<esper_module type="workflow">
+<purpose>
 Analyze performance characteristics systematically.
-
-## When to Use
-
-- profiling code
-- investigating latency issues
-- reviewing performance-sensitive changes
-
-## Workflow
-
-1. Understand the performance requirements and baseline.
-2. Measure before assuming bottlenecks.
-3. Evaluate the following systematically:
-   - algorithmic complexity
-   - memory allocations
-   - I/O overhead
-   - concurrency and synchronization
-   - caching strategies
-4. Verify edge cases where performance might degrade non-linearly.
-5. Surface assumptions and potential trade-offs (e.g., speed vs. memory).
-
-## Required Dependencies
-
-- checklists/performance.md
-- checklists/self-review.md
-- workflows/revision.md
-
-## Canonical Sources
-
-- principles/performance.md
+</purpose>
+<when_to_use>
+<item>profiling code</item>
+<item>investigating latency issues</item>
+<item>reviewing performance-sensitive changes</item>
+</when_to_use>
+<instructions>
+<execution_steps>
+<step>Understand the performance requirements and baseline.</step>
+<step>Measure before assuming bottlenecks.</step>
+<step>Evaluate the following systematically:</step>
+- algorithmic complexity
+- memory allocations
+- I/O overhead
+- concurrency and synchronization
+- caching strategies
+<step>Verify edge cases where performance might degrade non-linearly.</step>
+<step>Surface assumptions and potential trade-offs (e.g., speed vs. memory).</step>
+</execution_steps>
+</instructions>
+<dependencies>
+<required>
+<item>checklists/cleanup.md</item>
+<item>checklists/performance.md</item>
+<item>checklists/self-review.md</item>
+<item>workflows/revision.md</item>
+</required>
+<canonical_sources>
+<item>principles/performance.md</item>
+</canonical_sources>
+</dependencies>
+</esper_module>

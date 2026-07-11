@@ -2,17 +2,16 @@
 name: Research Report
 ---
 
-# Research Report
-
-## Purpose
-
+<esper_module type="template">
+<purpose>
 Document the findings of an investigation to support an engineering decision.
-
-## When to Use
-
-- evaluating libraries or tools
-- investigating system behavior
-- exploring new technologies
+</purpose>
+<when_to_use>
+<item>evaluating libraries or tools</item>
+<item>investigating system behavior</item>
+<item>exploring new technologies</item>
+</when_to_use>
+<output_format>
 
 ## Deliverable Structure
 
@@ -23,6 +22,7 @@ State the question being investigated.
 ### Sources
 
 List sources consulted:
+
 - Official documentation
 - Specifications
 - Implementation
@@ -40,8 +40,11 @@ Compare alternatives discovered during research.
 
 Actionable guidance supported by the evidence.
 
-## Canonical Sources
-
-- principles/reporting/findings.md
-- principles/reporting/taxonomy.md
-
+</output_format>
+<dependencies>
+<canonical_sources>
+<item>principles/reporting/findings.md</item>
+<item>principles/reporting/taxonomy.md</item>
+</canonical_sources>
+</dependencies>
+</esper_module>

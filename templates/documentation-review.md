@@ -2,16 +2,15 @@
 name: Documentation Review
 ---
 
-# Documentation Review
-
-## Purpose
-
+<esper_module type="template">
+<purpose>
 Evaluate the accuracy, completeness, and clarity of project documentation.
-
-## When to Use
-
-- documentation audits
-- reviewing READMEs or guides
+</purpose>
+<when_to_use>
+<item>documentation audits</item>
+<item>reviewing READMEs or guides</item>
+</when_to_use>
+<output_format>
 
 ## Deliverable Structure
 
@@ -31,8 +30,11 @@ Identify important omissions or undocumented features.
 
 Highlight obsolete content that needs removal or updating.
 
-## Canonical Sources
-
-- principles/reporting/report-structure.md
-- principles/reporting/findings.md
-
+</output_format>
+<dependencies>
+<canonical_sources>
+<item>principles/reporting/report-structure.md</item>
+<item>principles/reporting/findings.md</item>
+</canonical_sources>
+</dependencies>
+</esper_module>

@@ -2,30 +2,23 @@
 name: Explain Implementation
 ---
 
-# Explain Implementation Prompt
-
-## Purpose
-
-Explain how a system or component works.
-
-## When to Use
-
-- learning about a codebase
-- onboarding to a new project
-
-## Instructions
-
-Explain the implementation.
-
-Follow the Explain workflow.
-
-Prioritize helping the reader build a mental model.
-
-## Required Dependencies
-
-- workflows/agent-communication.md
-
-- workflows/explain.md
-- templates/explain.md
-
-
+<esper_module type="prompt">
+  <title>Explain Implementation Prompt</title>
+  <purpose>Explain how a system or component works.</purpose>
+  <when_to_use>
+    <item>learning about a codebase</item>
+    <item>onboarding to a new project</item>
+  </when_to_use>
+  <instructions>
+    <item>Explain the implementation.</item>
+    <item>Follow the Explain workflow.</item>
+    <item>Prioritize helping the reader build a mental model.</item>
+  </instructions>
+  <dependencies>
+<required>
+    <item>workflows/agent-communication.md</item>
+    <item>workflows/explain.md</item>
+    <item>templates/explain.md</item>
+  </required>
+</dependencies>
+</esper_module>
