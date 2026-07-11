@@ -2,27 +2,26 @@
 name: Performance Checklist
 ---
 
-# Performance Checklist
-
-## Purpose
-
+<esper_module type="checklist">
+<purpose>
 Ensure performance-critical changes are optimized and avoid common bottlenecks.
-
-## When to Use
-
-- optimizing code
-- reviewing performance-sensitive changes
-
-## Performance Verification
-
-- [ ] Obvious bottlenecks reviewed
-- [ ] Algorithmic complexity reasonable
-- [ ] Unnecessary allocations avoided
-- [ ] Expensive I/O minimized
-- [ ] Caching considered where appropriate
-- [ ] Concurrency reviewed where applicable
-- [ ] Performance assumptions explained
-
-## Canonical Sources
-
-- principles/performance.md
+</purpose>
+<when_to_use>
+<item>optimizing code</item>
+<item>reviewing performance-sensitive changes</item>
+</when_to_use>
+<performance_verification>
+<item uncompleted="true">Obvious bottlenecks reviewed</item>
+<item uncompleted="true">Algorithmic complexity reasonable</item>
+<item uncompleted="true">Unnecessary allocations avoided</item>
+<item uncompleted="true">Expensive I/O minimized</item>
+<item uncompleted="true">Caching considered where appropriate</item>
+<item uncompleted="true">Concurrency reviewed where applicable</item>
+<item uncompleted="true">Performance assumptions explained</item>
+</performance_verification>
+<dependencies>
+<canonical_sources>
+<item>principles/performance.md</item>
+</canonical_sources>
+</dependencies>
+</esper_module>

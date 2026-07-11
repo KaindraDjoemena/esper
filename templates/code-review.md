@@ -2,17 +2,16 @@
 name: Code Review
 ---
 
-# Code Review
-
-## Purpose
-
+<esper_module type="template">
+<purpose>
 Provide structured feedback on code changes to ensure correctness, security, performance, and maintainability.
-
-## When to Use
-
-- pull request reviews
-- peer reviews
-- code audits
+</purpose>
+<when_to_use>
+<item>pull request reviews</item>
+<item>peer reviews</item>
+<item>code audits</item>
+</when_to_use>
+<output_format>
 
 ## Deliverable Structure
 
@@ -35,8 +34,11 @@ Evaluate code clarity, coupling, and modularity.
 ### Testing
 Ensure sufficient test coverage and quality.
 
-## Canonical Sources
-
-- principles/reporting/report-structure.md
-- principles/reporting/findings.md
-
+</output_format>
+<dependencies>
+<canonical_sources>
+<item>principles/reporting/report-structure.md</item>
+<item>principles/reporting/findings.md</item>
+</canonical_sources>
+</dependencies>
+</esper_module>

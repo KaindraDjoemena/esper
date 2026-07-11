@@ -2,37 +2,35 @@
 name: Research
 ---
 
-# Research Workflow
-
-## Purpose
-
+<esper_module type="workflow">
+<purpose>
 Produce accurate, well-supported technical research.
-
-## When to Use
-
-- evaluating tools and libraries
-- learning new technologies
-
-## Workflow
-
+</purpose>
+<when_to_use>
+<item>evaluating tools and libraries</item>
+<item>learning new technologies</item>
+</when_to_use>
+<instructions>
+<execution_steps>
 When external information is needed:
-
-1. Read official documentation.
-2. Read specifications.
-3. Read implementation when available.
-4. Consult reputable community discussions.
-
+<step>Read official documentation.</step>
+<step>Read specifications.</step>
+<step>Read implementation when available.</step>
+<step>Consult reputable community discussions.</step>
 Clearly distinguish between:
-- documentation
-- implementation
-- opinion
-
+<item>documentation</item>
+<item>implementation</item>
+<item>opinion</item>
 Cite sources when practical.
-
-## Required Dependencies
-
-- checklists/self-review.md
-
-## Canonical Sources
-
-- principles/reporting/taxonomy.md
+</execution_steps>
+</instructions>
+<dependencies>
+<required>
+<item>checklists/cleanup.md</item>
+<item>checklists/self-review.md</item>
+</required>
+<canonical_sources>
+<item>principles/reporting/taxonomy.md</item>
+</canonical_sources>
+</dependencies>
+</esper_module>

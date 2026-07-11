@@ -2,16 +2,15 @@
 name: Explain
 ---
 
-# Explain
-
-## Purpose
-
+<esper_module type="template">
+<purpose>
 Provide a clear and structured explanation of an implementation that helps the reader build a mental model.
-
-## When to Use
-
-- explaining existing code
-- onboarding to a project
+</purpose>
+<when_to_use>
+<item>explaining existing code</item>
+<item>onboarding to a project</item>
+</when_to_use>
+<output_format>
 
 ## Deliverable Structure
 
@@ -27,7 +26,10 @@ Describe how the components work together (e.g., data flow, sequence of operatio
 
 Highlight any crucial but non-obvious details, edge cases, or design decisions.
 
-## Canonical Sources
-
-- principles/reporting/rubric.md
-
+</output_format>
+<dependencies>
+<canonical_sources>
+<item>principles/reporting/rubric.md</item>
+</canonical_sources>
+</dependencies>
+</esper_module>

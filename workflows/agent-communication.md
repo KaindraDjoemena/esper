@@ -2,22 +2,26 @@
 name: Agent Communication Flow
 ---
 
-# Agent Communication Flow
-
-## Purpose
-
+<esper_module type="workflow">
+<purpose>
 Standardize how the agent communicates with the user to prevent miscommunication and ensure explicit consent before actions are taken.
-
-## When to Use
-
+</purpose>
+<when_to_use>
 Always, whenever interacting directly with the user.
-
-## Instructions
-
+</when_to_use>
+<instructions>
+<execution_steps>
 You must strictly follow this communication flow:
-1. Provide a detailed **Plan**.
-2. Ask **Confirming Questions** (format these with bold letters: **A**, **B**, **C**).
-3. Ask for **Permission** to execute the plan.
-4. Execute, then **Summarize** your actions.
-
+<step>Provide a detailed Plan.</step>
+<step>Ask Confirming Questions (format these as a Markdown bulleted list with bold letters: - A, - B, - C).</step>
+<step>Ask for Permission to execute the plan.</step>
+<step>Execute, then Summarize your actions.</step>
 If the user's prompt is vague or ambiguous, prioritize asking clarifying questions instead of guessing, though you may offer a best-guess plan alongside them.
+</execution_steps>
+</instructions>
+<dependencies>
+<required>
+<item>principles/communication.md</item>
+</required>
+</dependencies>
+</esper_module>

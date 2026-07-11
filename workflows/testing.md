@@ -2,32 +2,30 @@
 name: Testing
 ---
 
-# Testing Workflow
-
-## Purpose
-
+<esper_module type="workflow">
+<purpose>
 Evaluate confidence in the implementation.
-
-## When to Use
-
-- writing new tests
-- reviewing existing test suites
-
-## Workflow
-
+</purpose>
+<when_to_use>
+<item>writing new tests</item>
+<item>reviewing existing test suites</item>
+</when_to_use>
+<instructions>
 Review:
-- existing tests
-- missing coverage
-- edge cases
-- failure scenarios
-
+<item>existing tests</item>
+<item>missing coverage</item>
+<item>edge cases</item>
+<item>failure scenarios</item>
 Recommend tests that meaningfully increase confidence.
 Avoid suggesting tests with little practical value.
-
-## Required Dependencies
-
-- checklists/testing.md
-
-## Canonical Sources
-
-- principles/testing.md
+</instructions>
+<dependencies>
+<required>
+<item>checklists/cleanup.md</item>
+<item>checklists/testing.md</item>
+</required>
+<canonical_sources>
+<item>principles/testing.md</item>
+</canonical_sources>
+</dependencies>
+</esper_module>

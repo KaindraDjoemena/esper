@@ -3,47 +3,37 @@ name: Reporting Taxonomy
 description: Defines consistent severity levels and confidence scales for engineering findings.
 ---
 
-# Reporting Taxonomy
-
-## Severity
-
+<esper_module type="principle">
+<severity>
 Severity should reflect engineering impact—not implementation effort.
-
-### Critical
+<subsection>Critical</subsection>
 Immediate engineering action required.
 Examples: security vulnerabilities, data corruption, release blockers.
-
-### High
+<subsection>High</subsection>
 Serious issues with significant user or engineering impact.
 Examples: broken functionality, major architectural flaws, performance regressions.
-
-### Medium
+<subsection>Medium</subsection>
 Important issues that should be addressed but are unlikely to block release.
 Examples: maintainability problems, incomplete abstractions, unnecessary complexity.
-
-### Low
+<subsection>Low</subsection>
 Minor issues.
 Examples: documentation gaps, small refactors, API consistency improvements.
-
-### Nit
+<subsection>Nit</subsection>
 Cosmetic observations.
 Examples: naming, formatting, wording, stylistic consistency.
-
 ---
-
-## Confidence
-
+</severity>
+<confidence>
 Confidence reflects the strength of the supporting evidence—not the importance of the finding.
 Prefer lower confidence over overstating certainty. Separate observations from inferences.
-
-### Confirmed
+<subsection>Confirmed</subsection>
 Directly supported by evidence.
 Examples: observed code, failing tests, documented behavior.
-
-### Likely
+<subsection>Likely</subsection>
 Strong evidence exists, but some assumptions remain.
 Further verification is recommended.
-
-### Speculative
+<subsection>Speculative</subsection>
 Limited evidence.
 Present as a hypothesis rather than a conclusion. Never present speculation as fact.
+</confidence>
+</esper_module>

@@ -2,17 +2,16 @@
 name: Implementation Plan
 ---
 
-# Implementation Plan
-
-## Purpose
-
+<esper_module type="template">
+<purpose>
 Define the concrete steps, risks, and validation methods for executing an engineering task.
-
-## When to Use
-
-- planning a feature
-- preparing a refactor
-- fixing a complex bug
+</purpose>
+<when_to_use>
+<item>planning a feature</item>
+<item>preparing a refactor</item>
+<item>fixing a complex bug</item>
+</when_to_use>
+<output_format>
 
 ## Deliverable Structure
 
@@ -40,7 +39,10 @@ Potential implementation risks.
 
 How success will be verified (e.g., tests, metrics, manual QA).
 
-## Canonical Sources
-
-- principles/reporting/rubric.md
-
+</output_format>
+<dependencies>
+<canonical_sources>
+<item>principles/reporting/rubric.md</item>
+</canonical_sources>
+</dependencies>
+</esper_module>
