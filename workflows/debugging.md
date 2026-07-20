@@ -42,9 +42,11 @@ If a bug is exceedingly persistent or requires niche tools that the agent lacks 
 </instructions>
 <dependencies>
 <required>
+<item>workflows/memory-management.md</item>
 <item>checklists/cleanup.md</item>
 <item>workflows/revision.md</item>
 <item>checklists/self-review.md</item>
+<item>checklists/automation-safety.md</item>
 </required>
 </dependencies>
 </esper_module>

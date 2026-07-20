@@ -1,5 +1,5 @@
 ---
-name: Delegation
+name: Orchestration
 description: A quality gate for validating and integrating work performed by delegated subagents.
 ---
 

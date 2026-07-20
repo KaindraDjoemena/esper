@@ -121,9 +121,9 @@ Each layer contributes something unique.
 
 Each module category has a strictly defined responsibility. Guidance should never cross these boundaries.
 
-## `routing.md` (Discovery)
+## `routing.md` (Deprecated)
 
-The central index that maps a user's request to the correct entry point. It prevents agents from eagerly loading the workspace and ensures context is built incrementally.
+Previously used as a central index, routing has now transitioned to Autonomous Intent Discovery via Antigravity's native rules. Agents now dynamically scan the `prompts/` directory to deduce the correct entry point based on the user's objective, ensuring seamless interaction without hardcoded paths.
 
 ## `prompts/` (Intent)
 

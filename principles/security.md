@@ -1,5 +1,6 @@
 ---
 name: Security
+keywords: [security, hack, exploit, auth, vulnerability, safe]
 ---
 
 <esper_module type="principle">

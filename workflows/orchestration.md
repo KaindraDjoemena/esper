@@ -1,5 +1,6 @@
 ---
-name: Delegation
+name: Orchestration
+keywords: [orchestrate, orchestration, subagent, delegate, complex, broad, large, partition, parallel]
 ---
 
 <esper_module type="workflow">
@@ -23,14 +24,16 @@ For each subtask, prepare the specific context the subagent will need:
 <item>The required dependencies (workflows, templates)</item>
 <item>Existing evidence and constraints</item>
 Exclude unnecessary context to preserve reasoning quality.
-<subsection>3. Delegate and Execute</subsection>
+<subsection>3. Produce A2A Contract</subsection>
+<step>Produce A2A Contract: For each subagent handoff, produce a JSON payload conforming to the A2A contract schema (`templates/a2a-contract.json`). The contract must include: a unique `task_id`, a `task_type` (one of: plan, execute, review, synthesize), a `payload` object containing the objective and all packaged context, and `status: pending`. Save the contract to `.esper/scratch/<task_id>.json` and validate it by running `python C:/Users/KD/.gemini/esper/scripts/evaluator.py .esper/scratch/<task_id>.json`. Only proceed with delegation if validation passes.</step>
+<subsection>4. Delegate and Execute</subsection>
 Invoke the subagents with their partitioned tasks and packaged context. Ensure each subagent has a clear, isolated responsibility.
-<subsection>4. Validate</subsection>
+<subsection>5. Validate</subsection>
 When a subagent completes its task, validate its output:
 <item>Are the conclusions supported by evidence?</item>
 <item>Were the constraints respected?</item>
 <item>Are there any new assumptions or unresolved questions introduced?</item>
-<subsection>5. Integrate and Review</subsection>
+<subsection>6. Integrate and Review</subsection>
 Synthesize the validated findings or code from all subagents into the primary task using a clear Merge Strategy:
 <item>For code: Ensure that merged changes from different agents do not create logical contradictions, syntax errors, or overlapping modifications.</item>
 <item>For reports: Synthesize findings into a single, unified narrative. Do not simply append subagent reports together.</item>
@@ -38,8 +41,9 @@ Perform a final review to ensure the integrated result forms a cohesive, working
 </instructions>
 <dependencies>
 <required>
+<item>workflows/memory-management.md</item>
 <item>checklists/cleanup.md</item>
-<item>checklists/delegation.md</item>
+<item>checklists/orchestration.md</item>
 <item>workflows/revision.md</item>
 <item>checklists/automation-safety.md</item>
 </required>

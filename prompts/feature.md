@@ -22,7 +22,7 @@ name: Feature Implementation
     <item>templates/implementation-plan.md</item>
   </required>
   <optional>
-    <item>workflows/delegation.md</item> <!-- for large features requiring parallel execution -->
+    <item>workflows/orchestration.md</item> <!-- for large features requiring parallel execution -->
   </optional>
 </dependencies>
 </esper_module>

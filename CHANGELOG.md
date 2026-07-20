@@ -2,6 +2,49 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.3.0] - 2026-07-20
+
+### Added
+- **`workflows/initialization.md` + `prompts/initialization.md`**: New workflow that bootstraps a project's `.esper/` directory on first use. Creates `notes/`, `checkpoints/`, `scratch/` scaffold, initializes `notes-manifest.md` and `checkpoints/index.md` with table headers, and handles `.gitignore` with explicit user confirmation.
+
+### Changed
+- **Orchestration namespace rename**: Renamed `prompts/delegation.md` → `prompts/orchestration.md`, `workflows/delegation.md` → `workflows/orchestration.md`, and `checklists/delegation.md` → `checklists/orchestration.md` to establish a consistent 1:1 namespace across all layers. `principles/delegation.md` retains its name as a philosophy concept. All reference sites (`prompts/architecture-review.md`, `prompts/feature.md`, `prompts/research.md`, `workflows/supervisor.md`, `refactor.py`) updated accordingly.
+- **A2A contract enforcement in orchestration workflow**: Added Step 3 to `workflows/orchestration.md` requiring orchestrator agents to produce a JSON handoff payload conforming to `templates/a2a-contract.json`, save it to `.esper/scratch/<task_id>.json`, and validate via `scripts/evaluator.py` before delegating to any subagent.
+- **`esp-cpt` skill expanded**: Fleshed out `esp-cpt/SKILL.md` from a minimal stub into a full 5-step spec covering slug input, timestamped directory creation, generation of `session-handover.md` / `todo-list.md` / `roadmap.md`, `checkpoints/index.md` table append, and optional conditional `git tag` integration.
+- **`esp-note` skill expanded**: Fleshed out `esp-note/SKILL.md` with global vs. local scope selection, YAML frontmatter requirements, dated slug filenames, `notes-manifest.md` table updates, `<when_to_use>` examples, and context bloat rule.
+- **`workflows/orchestration.md` keywords updated**: Frontmatter `keywords:` field expanded to `[orchestrate, orchestration, subagent, delegate, complex, broad, large, partition, parallel]` for improved JIT heuristic matching.
+
+## [3.2.0] - 2026-07-20
+
+### Changed
+- **Dreamer now performs real memory compression**: Replaced the `simulate_compression()` and `simulate_synthesis()` stub functions in `scripts/dreamer.py` with real implementations. `compress_memory()` now performs actual file-age-based pruning of `.esper/shared_context/` files using the existing `memory_manager.py` logic. `synthesize_knowledge_graph()` now honestly logs that LLM-based synthesis is not yet implemented instead of outputting a misleading success message. Added `--window-size` CLI argument (default: 10 files).
+- **JIT heuristics moved to module frontmatter**: Removed the hardcoded `HEURISTICS` dict from `scripts/jit_compiler.py`. Optional dependency keywords are now declared in the `keywords:` YAML frontmatter field of each module (`principles/security.md`, `principles/performance.md`, `workflows/orchestration.md`). The compiler now reads keywords dynamically, meaning new optional modules no longer require compiler changes.
+- **Bootstrap templates unified**: Removed stale `routing.md` references from both `bootstrap/GEMINI.md.template` and `bootstrap/CLAUDE.md`. Updated `bootstrap/CLAUDE.md` to use absolute paths consistent with the global Esper install location. Added explicit `ask_question` modal mandate to `GEMINI.md.template`'s communication flow.
+
+## [3.1.0] - 2026-07-13
+
+### Added
+- **Semantic Knowledge Graphs (GraphRAG)**: Built `scripts/knowledge_graph.py` and the global `esp-graph` skill to natively map and query complex architectural entity relationships, upgrading the framework from flat text RAG to a state-of-the-art hybrid GraphRAG architecture.
+- **Asynchronous Dreaming**: Deployed `scripts/dreamer.py`, a background daemon that operates on a configurable continuous loop (default 24 hours) to autonomously compress stale memory files and synthesize knowledge graph nodes, permanently preventing context bloat.
+- **Zero-Trust Agent Identity**: Created `checklists/zero-trust.md` to strictly lock down subagent capabilities based on designated roles, mathematically enforcing a secure **Read-Only** fallback for any undefined agents.
+
+## [3.0.0] - 2026-07-13
+
+### Added
+- **Graph-Based Workflow Engine**: Built `scripts/workflow_engine.py` to establish deterministic state-machine routing, state checkpointing, and infinite-loop detection, moving Esper away from fragile prompt-based delegation.
+- **Supervisor 'Plan-and-Execute' Architecture**: Introduced `workflows/supervisor.md` to decouple task planning from execution. Parent agents now act strictly as Supervisors, handing off tasks to worker agents via robust JSON Agent-to-Agent (A2A) contracts (`templates/a2a-contract.json`).
+- **Evaluator-Optimizer Middleware**: Embedded a neural self-reflection loop (`workflows/evaluator.md`) backed by deterministic Python validation (`scripts/evaluator.py`). Agents are now mathematically forced to validate and recursively self-critique their JSON handoffs (up to a 3-strike retry limit) before passing corrupted state downstream.
+
+## [2.1.0] - 2026-07-12
+
+### Added
+- **JIT Prompt Compiler**: Added `scripts/jit_compiler.py` to eliminate recursive file I/O latency. It acts as an Antigravity lifecycle hook that dynamically parses `<dependencies>`, compiles a flattened context payload, and automatically injects project-specific overrides (like `AGENTS.md` and `.esper/shared_context/`) before the agent initializes.
+- **Workspace Hygiene Rule**: Created `.agents/rules/workspace-hygiene.md` to strictly enforce pristine project roots. Agents are now hard-coded to write all temporary notes and logs exclusively to `.esper/scratch/` and proactively clean up stray scratchpads without touching source code.
+- **Autonomous Intent Discovery**: Fully deprecated the reliance on `routing.md` in the global bootstrap files. Agents are now hardcoded to use `list_dir` to dynamically discover available entry points in the `prompts/` directory upon initialization, allowing users to simply ask "do X" without needing to mention internal Esper file paths.
+- **Lifecycle Memory Management**: Implemented a sliding window working memory system via `scripts/memory_manager.py` and `workflows/memory-management.md` to deterministically prune stale context files, preventing token bloat during extended operations.
+- **Deterministic Guardrails (Policy-as-Code)**: Added `scripts/policy_gate.py` to hard-block high-risk actions. Upgraded `checklists/automation-safety.md` to force the use of the interactive `ask_question` modal for undeniably explicit Human-in-the-Loop (HITL) approval when the policy gate is triggered.
+- **JIT Compiler Resilience**: Upgraded the JIT compiler parser to use `re.finditer` for robust multi-block XML tag processing, and added graceful degradation that emits markdown warnings instead of crashing when dependencies are missing.
+
 ## [2.0.0] - 2026-07-11
 
 ### Added

@@ -26,6 +26,7 @@ Cite sources when practical.
 </instructions>
 <dependencies>
 <required>
+<item>workflows/memory-management.md</item>
 <item>checklists/cleanup.md</item>
 <item>checklists/self-review.md</item>
 </required>

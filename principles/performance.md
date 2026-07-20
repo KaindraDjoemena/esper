@@ -1,5 +1,6 @@
 ---
 name: Performance
+keywords: [speed, slow, optimize, latency, memory, fast, performance]
 ---
 
 <esper_module type="principle">
