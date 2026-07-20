@@ -22,6 +22,7 @@ Improve code quality while preserving behavior.
 </instructions>
 <dependencies>
 <required>
+<item>workflows/memory-management.md</item>
 <item>checklists/cleanup.md</item>
 <item>checklists/self-review.md</item>
 <item>checklists/automation-safety.md</item>

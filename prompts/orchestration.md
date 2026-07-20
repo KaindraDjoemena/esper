@@ -18,10 +18,11 @@ name: Orchestration
   <dependencies>
 <required>
     <item>workflows/agent-communication.md</item>
-    <item>workflows/delegation.md</item>
+    <item>workflows/orchestration.md</item>
     <item>templates/synthesis.md</item>
     <item>templates/shared-scratchpad.md</item>
     <item>checklists/automation-safety.md</item>
+    <item>workflows/supervisor.md</item>
   </required>
 </dependencies>
 </esper_module>

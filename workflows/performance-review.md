@@ -27,6 +27,7 @@ Analyze performance characteristics systematically.
 </instructions>
 <dependencies>
 <required>
+<item>workflows/memory-management.md</item>
 <item>checklists/cleanup.md</item>
 <item>checklists/performance.md</item>
 <item>checklists/self-review.md</item>

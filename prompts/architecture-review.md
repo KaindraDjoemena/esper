@@ -22,7 +22,7 @@ name: Architecture Review
     <item>templates/architecture-review.md</item>
   </required>
   <optional>
-    <item>workflows/delegation.md</item> <!-- for broad systems requiring partitioned review -->
+    <item>workflows/orchestration.md</item> <!-- for broad systems requiring partitioned review -->
   </optional>
 </dependencies>
 </esper_module>

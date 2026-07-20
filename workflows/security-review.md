@@ -26,6 +26,7 @@ Systematically review system posture and identify security risks.
 </instructions>
 <dependencies>
 <required>
+<item>workflows/memory-management.md</item>
 <item>checklists/cleanup.md</item>
 <item>checklists/security.md</item>
 <item>checklists/self-review.md</item>

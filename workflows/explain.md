@@ -23,6 +23,7 @@ Focus on helping the reader build a mental model rather than providing a line-by
 </instructions>
 <dependencies>
 <required>
+<item>workflows/memory-management.md</item>
 <item>checklists/cleanup.md</item>
 <item>checklists/self-review.md</item>
 <item>workflows/revision.md</item>
