@@ -12,6 +12,7 @@ Evaluate how well the implementation fits the project's architecture.
 </when_to_use>
 <instructions>
 <item>Understand the existing architecture before recommending changes.</item>
+<item>Use the `esp-rag` skill for text retrieval and the `esp-graph` skill for relationship traversal to map out architectural dependencies (implementing the GraphRAG paradigm).</item>
 <item>Identify architectural boundaries.</item>
 <item>Evaluate cohesion and coupling.</item>
 <item>Look for unnecessary abstractions.</item>
@@ -23,6 +24,7 @@ Evaluate how well the implementation fits the project's architecture.
 </instructions>
 <dependencies>
 <required>
+<item>workflows/memory-management.md</item>
 <item>checklists/cleanup.md</item>
 <item>checklists/architecture.md</item>
 </required>

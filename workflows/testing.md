@@ -21,6 +21,7 @@ Avoid suggesting tests with little practical value.
 </instructions>
 <dependencies>
 <required>
+<item>workflows/memory-management.md</item>
 <item>checklists/cleanup.md</item>
 <item>checklists/testing.md</item>
 </required>

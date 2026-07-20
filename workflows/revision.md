@@ -40,6 +40,7 @@ Close the `</scratchpad>`. Only after the critique and revision passes are compl
 </instructions>
 <dependencies>
 <required>
+<item>workflows/memory-management.md</item>
 <item>checklists/cleanup.md</item>
 <item>checklists/self-review.md</item>
 </required>

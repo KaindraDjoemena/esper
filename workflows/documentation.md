@@ -34,6 +34,7 @@ Avoid repeating information already expressed clearly in code.
 </instructions>
 <dependencies>
 <required>
+<item>workflows/memory-management.md</item>
 <item>checklists/cleanup.md</item>
 <item>checklists/documentation.md</item>
 <item>workflows/revision.md</item>

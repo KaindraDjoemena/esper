@@ -21,7 +21,7 @@ name: Technical Research
     <item>templates/research-report.md</item>
   </required>
   <optional>
-    <item>workflows/delegation.md</item> <!-- for broad topics requiring parallel investigation -->
+    <item>workflows/orchestration.md</item> <!-- for broad topics requiring parallel investigation -->
   </optional>
 </dependencies>
 </esper_module>

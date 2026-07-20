@@ -68,9 +68,11 @@ If uncertain, state the uncertainty.
 </instructions>
 <dependencies>
 <required>
+<item>workflows/memory-management.md</item>
 <item>checklists/cleanup.md</item>
 <item>workflows/revision.md</item>
 <item>checklists/feature.md</item>
+<item>checklists/automation-safety.md</item>
 </required>
 <canonical_sources>
 <item>principles/engineering.md</item>

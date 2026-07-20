@@ -69,6 +69,23 @@ To prevent context window bloat, Esper enforces decentralized, domain-specific m
 
 - **Global Context** (`~/.gemini/esper/shared_context/`) acts as the framework's meta-knowledge base.
 - **Project Context** (`<project-root>/.esper/shared_context/`) is generated dynamically by agent skills. You should add `.esper/` to your project's `.gitignore` to prevent memory contamination in your public git history.
+- **Workspace Hygiene**: Agents are strictly governed by `.agents/rules/workspace-hygiene.md` to keep your root directory clean. All temporary AI scratchpads and diagnostic files are sandboxed within `.esper/scratch/`.
+- **Lifecycle Memory Management**: A sliding-window deterministic pruning system (`memory_manager.py`) runs dynamically during long conversations to proactively "forget" stale files and prevent token exhaustion.
+- **Semantic Knowledge Graphs (GraphRAG)**: Esper utilizes a native Python engine (`knowledge_graph.py`) to map complex entity relationships, bridging standard RAG with architectural dependency mapping.
+- **Asynchronous Dreaming**: A background daemon (`dreamer.py`) runs in a continuous loop to automatically compress stale memory and synthesize insights, ensuring your context window remains pristine without manual intervention.
+
+## Multi-Agent Orchestration
+
+Esper natively supports state-of-the-art **Graph-Based Orchestration** utilizing a Supervisor "Plan-and-Execute" architecture.
+- **State Machine Routing**: A deterministic Python workflow engine (`workflow_engine.py`) securely manages subagent routing, infinite-loop detection, and state checkpoints.
+- **Agent-to-Agent (A2A) Contracts**: Tasks are decoupled from conversational contexts and routed to specialized execution subagents via strict JSON data contracts.
+- **Evaluator-Optimizer Loops**: A hybrid neuro-symbolic middleware (`evaluator.py`) mathematically forces agents to recursively self-critique and refine their JSON handoffs (up to a 3-strike limit) before passing data downstream, guaranteeing pipeline integrity.
+
+## Governance & Security
+
+Esper operates on a strict **Zero-Trust Identity** model. Subagent permissions are locked down based on explicit roles via `checklists/zero-trust.md`. If a subagent is spawned without a defined role, it is mathematically sandboxed into a **Read-Only** fallback state, ensuring it cannot accidentally mutate source code.
+
+Furthermore, Esper enforces **Deterministic Guardrails** using Policy-as-Code. A Python policy gate (`policy_gate.py`) intercepts high-risk operations (e.g., bulk edits or source code deletions) and halts them without crashing the workflow. Agents are forced by `checklists/automation-safety.md` to trigger an interactive Human-in-the-Loop (HITL) modal to request explicit user approval before proceeding.
 
 ## Available Skills
 
@@ -88,4 +105,5 @@ Once installed, agents can invoke these skills on demand to perform complex work
 
 Esper includes built-in Python utility scripts located in the `scripts/` directory to help maintain the framework:
 
+- **`jit_compiler.py`**: A Just-In-Time compiler designed to be used as an Antigravity `pre-task` hook. It flattens Esper's recursive dependency graph into a single injected context payload, saving LLM tokens and instantly pulling in local project overrides (`AGENTS.md`).
 - **`scan_dependencies.py`**: A graph-parsing tool that analyzes all Markdown files, tracking dependencies and inline links to flag broken references or orphaned modules, outputting the results as structured JSON.

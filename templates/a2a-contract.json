@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "A2A Data Contract",
+  "description": "JSON schema for Agent-to-Agent communication contracts within the Esper Supervisor architecture.",
+  "type": "object",
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "description": "Unique identifier for the task"
+    },
+    "parent_agent_id": {
+      "type": "string",
+      "description": "ID of the coordinating supervisor agent"
+    },
+    "task_type": {
+      "type": "string",
+      "enum": ["plan", "execute", "review", "synthesize"],
+      "description": "The category of the task"
+    },
+    "payload": {
+      "type": "object",
+      "description": "The input data or output result for the task",
+      "additionalProperties": true
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "in_progress", "completed", "failed"],
+      "description": "Current status of the task"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": ["task_id", "task_type", "payload", "status"]
+}

@@ -21,6 +21,7 @@ If the user's prompt is vague or ambiguous, prioritize asking clarifying questio
 </instructions>
 <dependencies>
 <required>
+<item>workflows/memory-management.md</item>
 <item>principles/communication.md</item>
 </required>
 </dependencies>

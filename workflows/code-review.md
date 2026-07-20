@@ -56,6 +56,7 @@ This demonstrates the evidence used to reach conclusions.
 </instructions>
 <dependencies>
 <required>
+<item>workflows/memory-management.md</item>
 <item>checklists/cleanup.md</item>
 <item>workflows/revision.md</item>
 <item>checklists/code-review.md</item>
